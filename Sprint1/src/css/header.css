@@ -29,8 +29,16 @@ body {
     transform: translateX(-100px);
 }
 
-.link, .register, .login {
+.link {
     width: 124px;
+    height: 43px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register, .login {
+    width: 80px;
     height: 43px;
     background-color: white;
     display: flex;

@@ -51,18 +51,63 @@ body {
     top: 28px; 
 }
 
+.links1 {
+    width: 91px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 64px; 
+
+}
+.links2 {
+    width: 91px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100px; 
+
+}
+
 .column-1 {
     left: 138px; /* Posicionamiento lateral específico */
+}
+.colum1_1 {
+    left: 138px
+}
+.colum2_1 {
+    left: 138px
 }
 
 .column-2 {
     left: 377px; /* Posicionamiento lateral específico */
 }
+.colum1_2 {
+    left: 377px
+}
+.colum2_2 {
+    left: 377px
+}
 
 .column-3 {
     right: 377px; /* Posicionamiento lateral específico */
 }
+.colum1_3 {
+    right: 377px
+}
+.colum2_3 {
+    right: 377px
+}
 
 .column-4 {
     right: 138px; /* Posicionamiento lateral específico */
+}
+.colum1_4 {
+    right: 138px
+}
+.colum2_4 {
+    right: 138px
 }
