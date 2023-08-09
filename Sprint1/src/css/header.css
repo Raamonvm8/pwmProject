@@ -36,7 +36,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
+
+.link:hover {
+    background-color: gray;
+    cursor:default;
+}
+
 .register, .login {
     width: 80px;
     height: 43px;
