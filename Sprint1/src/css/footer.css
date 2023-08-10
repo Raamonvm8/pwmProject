@@ -1,113 +1,53 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-.footer {
-    width: 1440px;
-    height: 165px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    position: absolute;
-    bottom: 0;
-}
-
 .logo {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: rgb(118, 118, 118);
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.line {
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    position: fixed;
-    bottom: 165px;
+.footer-section {
+    border-top: 1px solid black;
+}
 
-
+.wrapper {
+    display: grid;
+    justify-content: center;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+    grid-template-columns: repeat(5, [col] 1fr);
+    grid-template-rows: repeat(3, [row] auto);
+    background-color: #fff;
+    color: #444;
 }
 
 .column {
-    width: 91px;
-    height: 24px;
-    background-color: white;
-    display: flex;
+    grid-row: 1;
+    padding: 1rem;
+}
+
+.row-two, .row-one {
+    display: grid;
     align-items: center;
-    justify-content: center;
-    position: absolute;
-    text-decoration: underline;
-    top: 28px; 
 }
 
-.links1 {
-    width: 91px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 64px; 
-
-}
-.links2 {
-    width: 91px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 100px; 
-
+.column-first {
+    grid-column: 1 / 5;
 }
 
-.column-1 {
-    left: 138px; /* Posicionamiento lateral específico */
-}
-.colum1_1 {
-    left: 138px
-}
-.colum2_1 {
-    left: 138px
+.column-second {
+    grid-column: 2 / 5;
 }
 
-.column-2 {
-    left: 377px; /* Posicionamiento lateral específico */
-}
-.colum1_2 {
-    left: 377px
-}
-.colum2_2 {
-    left: 377px
+.column-third {
+    grid-column: 3 / 5;
 }
 
-.column-3 {
-    right: 377px; /* Posicionamiento lateral específico */
-}
-.colum1_3 {
-    right: 377px
-}
-.colum2_3 {
-    right: 377px
+.column-fourth {
+    grid-column: 4 / 5;
 }
 
-.column-4 {
-    right: 138px; /* Posicionamiento lateral específico */
-}
-.colum1_4 {
-    right: 138px
-}
-.colum2_4 {
-    right: 138px
+.column-fifth {
+    grid-column: 5 / 5;
 }
