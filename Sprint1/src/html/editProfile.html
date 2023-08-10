@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add animal</title>
+    <title>Editar Perfil</title>
     <link rel="stylesheet" href="../css/form.css">
 </head>
 <body>
     <!-- Aquí va el header -->
     <div class="form-add-animal-position">
         <form class="form-add-animal" id="form-animal">
-            <p id="title-form">Datos del animal</p>
+            <p id="title-form">Editar perfil</p>
             <div class="field-with-text">
                 <label class ="field-form" for="fname">Campo 1:</label><br>
                 <input class="input-form"  type="text" id="fname" name="fname"><br>
@@ -27,7 +27,8 @@
                 <label class ="field-form" for="lname">Campo 4:</label><br>
                 <input class="input-form" type="text" id="lname" name="lname"><br>
             </div>
-            <button type="submit" form="form-animal" class="button-form" value="Submit">Enviar</button>
+            <button class="button-form" id="cancel-button" >Cancelar</button>
+            <button type="submit" form="form-animal" class="button-form" value="Submit">Guardar Cambios</button>
         </form>
     </div>
 

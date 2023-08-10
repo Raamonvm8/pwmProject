@@ -38,10 +38,14 @@
 }
 
 
-#button-add-animal {
+.button-form {
     width: calc(10vw + 0.4rem);
     height: calc(5vh + 0.1rem);
     border-radius: 10px;
     background-color: #F5F5F5;
     font-size: calc(1vh + 0.3rem);
+}
+
+#cancel-button{
+    margin-right: 20px;
 }
