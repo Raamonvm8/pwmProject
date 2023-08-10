@@ -1,0 +1,102 @@
+
+.daycare-page {
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-rectangle {
+    position: absolute;
+    width: 525px;
+    height: 325px;
+    margin-top: 160px;
+    margin-left: -650px;
+}
+
+.info-rectangle {
+    position: absolute;
+    text-align: center;
+    width: 730px;
+    height: 325px;
+    background-color: rgb(183, 183, 183);
+    margin-top: 160px;
+    margin-left: 600px;
+    justify-items: center;
+}
+
+.info-rectangle h2 {
+    font-size: 24px;
+}
+
+.white-rectangle{
+    width: 605px;
+    height: 155px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.reserve-button {
+    margin-top: 20px;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reseñas{
+    position: absolute;
+    width: 1030px;
+    height: 250px;
+    background-color: rgb(183, 183, 183);
+    margin-top: 510px;
+    text-align: center;
+}
+
+.rectangle1{
+    width: 950px;
+    height: 80px;
+    margin-left: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    
+    align-content: center;
+
+}
+
+.image-juan{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.rectangle2{
+    width: 950px;
+    height: 80px;
+    margin-left: 40px;
+    margin-top: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    align-content: center;
+
+}
+
+.image-pepe{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+}
