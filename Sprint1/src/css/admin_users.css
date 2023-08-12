@@ -1,0 +1,36 @@
+.page {
+    width: 1440px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    margin-top: 170px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gray-box {
+    width: 1070px;
+    height: 370px;
+    margin-top: 70px;
+    border: 1px solid black;
+    background-color: #bababa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.white-box {
+    width: 1070px;
+    height: 70px;
+    background-color: white;
+    margin-top: 70px;
+}
