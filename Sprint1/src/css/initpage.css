@@ -95,6 +95,7 @@ button {
 .image-pepe{
     width: 60px;
     height: 60px;
+    margin-bottom: 30px;
     margin-left: 10px;
     background-color: white;
     border-radius: 50%;
