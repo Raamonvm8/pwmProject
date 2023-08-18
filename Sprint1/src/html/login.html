@@ -8,23 +8,17 @@
 </head>
 <body>
     <!-- Aquí va el header -->
-    
-    <div class="login-page">
-        <div class="login-box">
-            <h1>Login</h1>
-            <div class="input-box">
-                <p>Email</p>
-                <input type="text" placeholder="Ingresa tu email">
-            </div>
-            <div class="input-box">
-                <p>Password</p>
-                <input type="password" placeholder="Ingresa tu contraseña">
-            </div>
-
-            <div class="login-button"> <button class="login-form">Login</button></div>
-            <p class="signup-link">No tienes cuenta...?</p>
-        </div>
-    </div>
+    <div class="form-login-position">
+        <form class="form-login" id="form-login">
+            <h1 id="login-form-header">LOGIN</h1>    
+            <label class="label-input">Email</label>
+            <input class="input-field" type="text" placeholder=" Email..."><br>
+            <label class="label-input">Password</label>
+            <input class="input-field" type="password" placeholder=" ******"><br>
+            <button type="submit" form="form-login" class="button-form" value="Submit">Login</button>
+            <a class="signup-link" href="../html/signUp.html">Do you already an have account...?</a>
+        </form>
+    <div>
     <!-- Aquí va el footer -->
 </body>
 </html>
