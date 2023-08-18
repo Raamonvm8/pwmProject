@@ -1,12 +1,7 @@
-body {
-    margin: 0;
-    padding: 0;
-}
 
 .header {
-    width: 1440px;
-    height: 120px;
-    background-color: gray;
+
+    background-color: #CECECE;
     display: flex;
     align-items: center;
     justify-content: space-between;
