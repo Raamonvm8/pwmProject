@@ -16,7 +16,7 @@
     justify-content: center;
     grid-gap: 1rem;
     margin-top: 1rem;
-    grid-template-columns: repeat(5, [col] 1fr);
+    grid-template-columns: repeat(4, [col] 1fr);
     grid-template-rows: repeat(3, [row] auto);
     background-color: #fff;
     color: #444;
