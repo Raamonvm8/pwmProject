@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "icon" type = "image/ico" href = "../logo.ico">
-    <title>Página de Reserva</title>
-    <link rel="stylesheet" href="../css/reservation.css">
-</head>
-<body>
-    <div class="page">
-        <div class="sections-container">
-            <div class="left-section">
-                <h2>Formulario de reserva</h2>
-                <div class="white-box">
-                    <p>Field 1</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "icon" type = "image/ico" href = "../logo.ico">
+        <title>Página de Reserva</title>
+        <link rel="stylesheet" href="../css/reservation.css">
+    </head>
+    <body>
+        <!-- Aqui va el header-->
+
+        <div class="page">
+            <div class="sections-container">
+                <div class="left-section">
+                    <h2>Formulario de reserva</h2>
+                    <div class="white-box">
+                        <p>Field 1</p>
+                    </div>
+                    <div class="white-box">
+                        <p>Field 2</p>
+                    </div>
+                    <div class="white-box">
+                        <p>Field 3</p>
+                    </div>
                 </div>
-                <div class="white-box">
-                    <p>Field 2</p>
-                </div>
-                <div class="white-box">
-                    <p>Field 3</p>
+                <div class="right-section">
+                    <h2>Choose day</h2>
+                    <input type="date" id="datePicker">
                 </div>
             </div>
-            <div class="right-section">
-                <h2>Choose day</h2>
-                <input type="date" id="datePicker">
+            <div class="second-part">
+                <div class="availability-section">
+                    <h3>Disponibilidad: </h3>
+                    <div class="time-box">16:00</div>
+                    <div class="time-box">17:00</div>
+                    <div class="time-box">18:00</div>
+                </div>
+                <button class="confirm-button">Confirmar reserva</button>
             </div>
+            
+        <!-- Aqui va el footer-->
         </div>
-        <div class="second-part">
-            <div class="availability-section">
-                <h3>Disponibilidad: </h3>
-                <div class="time-box">16:00</div>
-                <div class="time-box">17:00</div>
-                <div class="time-box">18:00</div>
-            </div>
-            <button class="confirm-button">Confirmar reserva</button>
-        </div>
-        
-        
-    </div>
-</body>
+    </body>
 </html>
