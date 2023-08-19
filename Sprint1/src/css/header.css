@@ -1,55 +1,48 @@
+.logo{
+    width: 4rem;
+    border-radius: 50%;
+}
 
 .header {
     background-color: #CECECE;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
 }
 
-
-.logo {
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    border-radius: 50%;
+.logo-container{
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.links-container {
+.nav-header{
     display: flex;
-    gap: 50px; 
-    transform: translateX(-100px);
+    align-items: center;
 }
 
 .link {
-    width: 124px;
-    height: 43px;
+    padding: 10px 20px;
     background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin: 15px;
 }
 
 .link:hover {
     background-color: gray;
-    cursor:default;
 }
 
-.register, .login {
-    width: 80px;
-    height: 43px;
+.register-button, .login-button {
     background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
 }
 
-.links-register-log {
-    display: flex;
-    gap: 25px;
-    transform: translateX(-100px);
+.register-button:hover, .login-button:hover {
+    background-color: gray;
 }
