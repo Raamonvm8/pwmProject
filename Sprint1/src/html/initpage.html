@@ -8,24 +8,34 @@
         <link rel="stylesheet" href="../css/initPage.css">
     </head>
     <body>
-        <div class="daycare-page">
-            <a><img src="../images/map.png" class="image-rectangle"/></a>
+        <!-- Aqui va el header -->
+
+        <div class="daycare-section">
+            <div id="imagen-position">
+                <img src="../images/map.png" loading="lazy" class="image-rectangle"/>
+            </div>
             <div class="info-rectangle">
-                <h2>Daycare information Selected</h2>
+                <h2>Daycare information Selected</h2><br>
                 <textarea class="white-rectangle" readonly > The point of using Lorem Ipsum is that it has a more-or-less normal. Distribution of letters, as opposed to using 'Content here'. </textarea>
                 <div class="reserve-button">
-                    <button>Reservar</button>
+                    <button id="button-reservation"><strong>Reservation<strong></button>
                 </div>
             </div>
-            <div class="reseñas">
-                <h2>App reviews</h2>
-                <div class="rectangle1" readonly>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    <a><img src="../images/user1.png" class="image-juan"><img/></a>
-                </div>
-                <div class="rectangle2" readonly>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    <a><img src="../images/user2.png" class="image-pepe"><img/></a>
-                </div>
+            <div id="reseñas-init-page">
+                <div class="reseñas">
+                    <h2>App reviews</h2>
+                        <div class="rectangle">
+                            <img src="../images/user1.png" loading="lazy" class="image-users"><img/>
+                            <textarea class="text-user" readonly>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</textarea>            
+                        </div>
+                            <div class="rectangle">
+                                <img src="../images/user2.png" loading="lazy" class="image-users"><img/>
+                                <textarea class="text-user" readonly>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</textarea> 
+                            </div>
+                    </div>
             </div>
         </div>
+
+        <!-- Aqui va el footer -->
     </body>
 </html>
