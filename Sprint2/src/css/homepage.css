@@ -41,3 +41,9 @@
     border: 1px solid black ;
     border-radius: 5px;
 }
+
+/*Tablet*/
+@media only screen and (max-width: 1200px) {}
+
+/*Movil*/
+@media only screen and (max-width: 750px) {}

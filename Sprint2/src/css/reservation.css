@@ -76,13 +76,6 @@
     justify-content: center;
 }
 
-
-
-
-
-
-
-
 .confirm-button {
     border: 1px solid black;
     background-color: #e4e2e2;
@@ -92,3 +85,9 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+/*Tablet*/
+@media only screen and (max-width: 1200px) {}
+
+/*Movil*/
+@media only screen and (max-width: 750px) {}

@@ -5,14 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "icon" type = "image/ico" href = "../logo.ico">
         <title>Daycare information</title>
+        <link rel="stylesheet" href="../css/components/header.css">
+        <link rel="stylesheet" href="../css/components/footer.css">
         <link rel="stylesheet" href="../css/initPage.css">
+        <script src="../js/loadComponents.js"></script>
     </head>
     <body>
         <!-- Aqui va el header -->
+        <script>loadComponents("../html/components/header.html", "header")</script>
+        <header id="header" ></header>
+
 
         <div class="daycare-section">
             <div id="imagen-position">
-                <img src="../images/map.png" loading="lazy" class="image-rectangle"/>
+                <img src="../assets/images/map.png" loading="lazy" class="image-rectangle"/>
             </div>
             <div class="info-rectangle">
                 <h2>Daycare information Selected</h2><br>
@@ -37,5 +43,7 @@
         </div>
 
         <!-- Aqui va el footer -->
+        <script>loadComponents("../html/components/footer.html", "footer")</script>
+        <footer id="footer" ></footer>
     </body>
 </html>

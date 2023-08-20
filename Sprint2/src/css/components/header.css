@@ -5,10 +5,10 @@
 
 .header {
     background-color: #CECECE;
-    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 .logo-container{
@@ -46,3 +46,9 @@
 .register-button:hover, .login-button:hover {
     background-color: gray;
 }
+
+/*Tablet*/
+@media only screen and (max-width: 1200px) {}
+
+/*Movil*/
+@media only screen and (max-width: 750px) {}
