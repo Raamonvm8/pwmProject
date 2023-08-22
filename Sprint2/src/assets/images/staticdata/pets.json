@@ -1,0 +1,35 @@
+{
+    "users": [
+        {
+        "email": "ramon@gmail.com",
+        "Pets": {
+            "Tipo de animal": "Perro",
+            "Nombre animal": "Coco",
+            "Género": "M",
+            "Raza": "chiguagua",
+            "Peso": "4kg"    
+        },
+        "Aditionals": {
+            "Tipo de comida": "petisuit"
+
+        }
+            
+        },
+        {
+        "id": 2,
+        "Nombre": "Pepe",
+        "email": "pepe@gmail.com",
+        "password": "12345678",
+        "administrador": false
+        },
+        {
+        "id": 3,
+        "Nombre": "Jorge",
+        "email": "jorge@gmail.com",
+        "password": "12345678",
+        "administrador": false
+        }
+    ]
+}
+
+
