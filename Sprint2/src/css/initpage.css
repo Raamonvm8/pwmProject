@@ -11,14 +11,20 @@
 }
 
 .image-rectangle {
-    width: 70%;
+    
+    width: 520px;
+    height: 320px;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-items: center;
+    
 }
 
 .info-rectangle {
     text-align: center;
     display: inline-block;
     width: 50%;
-    background-color: rgb(183, 183, 183);
+    background-color: #CAF729;
     border-radius: 10px;
     border: 1px black solid;
 }
@@ -39,13 +45,6 @@
     margin: 1rem;
     border-radius: 10px;
 }
-
-
-
-
-
-
-
 
 #imagen-position{
     display: inline-block;
@@ -81,11 +80,14 @@
     text-align: -webkit-center;
 }
 .reseñas{
-    background-color: rgb(183, 183, 183);
+    background-color: #09C184;
     text-align: center;
     width: 80%;
     height: calc(20rem + 2vh);
     text-align: -webkit-center;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 20px;
 }
 
 /*Tablet*/

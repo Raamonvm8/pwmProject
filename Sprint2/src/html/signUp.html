@@ -5,26 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "icon" type = "image/ico" href = "../logo.ico">
         <title>Sign up</title>
+        <link rel="stylesheet" href="../css/components/header.css">
+        <link rel="stylesheet" href="../css/components/footer.css">
+        <script src="../js/loadComponents.js"></script>
         <link rel="stylesheet" href="../css/components/form.css"> 
     </head>
     <body>
         <!-- Aquí va el header -->
-        
+        <script>loadComponents("../html/components/header.html", "header")</script>
+        <header id="header" ></header>
         <div class="form-register-position">
             <form class="form-register" id="form-register">
-                <h2 class="title-form" id="login-form-header">Sign up</h2><br>
-                <label class="field-form">Field 1</label><br>
+                <h2 class="title-form" id="login-form-header">Registrarse</h2><br>
+                <label class="field-form">Nombre</label><br>
                 <input class="input-form" placeholder="****"/><br>
-                <label class="field-form">Field 2</label><br>
+                <label class="field-form">Apellidos</label><br>
                 <input class="input-form" placeholder="****"/><br>
-                <label class="field-form">Field 3</label><br>
+                <label class="field-form">Correo</label><br>
                 <input class="input-form" placeholder="****"/><br>
-                <label class="field-form">Field 4</label><br>        
+                <label class="field-form">Contraseña</label><br>        
                 <input class="input-form" placeholder="****"/><br>
-                <button type="submit" form="form-register" class="button-form" value="Submit">Sign up</button>
+                <button type="submit" form="form-register" class="button-form" value="Submit" onclick="location.href='initPage.html'; return false;">Registrarse</button>
             </form>
         </div>
 
         <!-- Aquí va el footer -->
+        <script>loadComponents("../html/components/footer.html", "footer")</script>
+        <footer id="footer" ></footer>
     </body>
 </html>

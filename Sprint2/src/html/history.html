@@ -5,28 +5,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "icon" type = "image/ico" href = "../logo.ico">
         <title>User History</title>
+        <link rel="stylesheet" href="../css/components/header.css">
+        <link rel="stylesheet" href="../css/components/footer.css">
+        <script src="../js/loadComponents.js"></script>
         <link rel="stylesheet" href="../css/history.css">
     </head>
     <body>
         <!-- Aqui va el header -->
-
+        <script>loadComponents("../html/components/header.html", "header")</script>
+        <header id="header" ></header>
         <div class="page">
             <div class="left-section">
-                <h2 class="title-section-history">Pending bookings</h2>
-                <label id="book-count-history">1 Book</label>
-                <textarea id="book-text-info" class="white-box">The point of using Lorem Ipsum is that it has a more-or-less normal </textarea>
-                <div class="buttons">
-                    <button class="button-history">Modify</button>
-                    <button class="button-history">Cancel</button>
-                </div>
+                <h2 class="title-section-history">Reservas Pendientes</h2>
+                <label id="book-count-history">1 Reserva</label>
+                <textarea id="book-text-info" class="white-box">
+Residencia Canina Majacan:
+Llegada: 05/11/2023
+Salida: 10/11/2023
+- Opciones adicionales:
+2 paseos diarios
+Comida incluida
+- Precio: 95€ </textarea>
+                
             </div>
             <div class="right-section">
-                <h2 class="title-section-history">Booking history</h2>
-                <textarea class="white-box">The point of using Lorem Ipsum is that it has a more-or-less normal</textarea>
-                <textarea class="white-box">The point of using Lorem Ipsum is that it has a more-or-less normal  </textarea>
+                <h2 class="title-section-history">Historial de Reservas</h2>
+                <textarea class="white-box">
+Canary Can:
+Llegada: 20/04/2023
+Salida: 30/04/2023
+- Opciones adicionales: NO
+- Precio: 60€
+                </textarea>
+                <textarea class="white-box">
+Centro Canino Tindara:
+Llegada: 18/12/2022
+Salida: 30/12/2022
+- Opciones adicionales:
+2 paseos diarios
+1 ducha
+- Precio: 130€  
+                </textarea>
             </div>
         </div>
         
         <!-- Aqui va el footer -->
+        <script>loadComponents("../html/components/footer.html", "footer")</script>
+        <footer id="footer" ></footer>
     </body>
 </html>

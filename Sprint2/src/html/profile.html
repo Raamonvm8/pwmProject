@@ -5,41 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "icon" type = "image/ico" href = "../logo.ico">
         <title>Profile</title>
+        <link rel="stylesheet" href="../css/components/header.css">
+        <link rel="stylesheet" href="../css/components/footer.css">
+        <script src="../js/loadComponents.js"></script>
         <link rel="stylesheet" href="../css/profile.css">
     </head>
     <body>
         <!-- Aquí va el header -->
-         
+        <script>loadComponents("../html/components/header.html", "header")</script>
+        <header id="header" ></header>
         <div class="profile-page">
             <div class="main-rectangle">
                 <div class="left-section">
-                    <div class="profile-photo">
-                        <p>Profile photo</p>
-                    </div>
+                    <img class="profile-photo" src="../assets/images/foto_perfil.png">
+                    
+                        <p>Foto perfil</p>
+                    </img>
                 </div>
                 <div class="vertical-line"></div>
                 <div class="right-section">
-                    <label class="field-input-profile">Field 1</label>
-                    <input class="input-perfil" placeholder="Field 1" readonly/>
-                    <label class="field-input-profile">Field 2</label>
-                    <input class="input-perfil" placeholder="Field 2" readonly/>
-                    <label class="field-input-profile">Field 3</label>
-                    <input class="input-perfil" placeholder="Field 3" readonly/>
-                    <label class="field-input-profile">Field 4</label>
-                    <input class="input-perfil" placeholder="Field 4" readonly/>
+                    <label class="field-input-profile">Nombre</label>
+                    <input class="input-perfil" placeholder="Ramón" readonly/>
+                    <label class="field-input-profile">Apellidos</label>
+                    <input class="input-perfil" placeholder="Valls Martin" readonly/>
+                    <label class="field-input-profile">Correo</label>
+                    <input class="input-perfil" placeholder="ramon@gmail.com" readonly/>
+                    <label class="field-input-profile">Contraseña</label>
+                    <input class="input-perfil" type="password" value="12345678"  readonly/>
                 </div>
             </div>
             <div class="action-menu">
-                <h2>Actions menu</h2>
+                <h2>Menú Acciones</h2>
                 <div class="action-buttons">
-                    <button class="button-profile">Edit profile</button>
-                    <button class="button-profile">Nueva reservation</button>
-                    <button class="button-profile">Booking history</button>
-                    <button class="button-profile">My pets</button>
+                    <button class="button-profile" onclick="location.href='editProfile.html'; return false;">Editar perfil</button>
+                    <button class="button-profile" onclick="location.href='initpage.html'; return false;">Nueva reserva</button>
+                    <button class="button-profile" onclick="location.href='history.html'; return false;">Historial de reservas</button>
+                    <button class="button-profile" onclick="location.href='myPets.html'; return false;">Mis mascotas</button>
                 </div>
             </div>
         </div>
 
         <!-- Aquí va el footer -->
+        <script>loadComponents("../html/components/footer.html", "footer")</script>
+        <footer id="footer" ></footer>
     </body>
 </html>

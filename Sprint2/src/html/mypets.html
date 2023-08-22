@@ -5,33 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "icon" type = "image/ico" href = "../logo.ico">
         <title>My pets</title>
+        <link rel="stylesheet" href="../css/components/header.css">
+        <link rel="stylesheet" href="../css/components/footer.css">
+        <script src="../js/loadComponents.js"></script>
         <link rel="stylesheet" href="../css/myPets.css">
     </head>
     <body>
         <!-- Aqui va el header -->
-
+        <script>loadComponents("../html/components/header.html", "header")</script>
+        <header id="header" ></header>
         <div class="ini-page">
             <div class="rectangle-pets">
                 <div class="photos-pet">
-                    <a><img src="../images/dog.png" alt="foto-animal"/></a>
-                    <label class="animal-name">Pet 1</label>
+                    <a href="editPet.html"><img src="../assets/images/mypets/perro1.png" alt="foto-animal"/></a>
+                    <label class="animal-name">Coco</label>
                 </div>
                 <div class="photos-pet">
-                    <a><img src="../images/cat.png" alt="foto-animal"/></a>
-                    <label class="animal-name">Pet 2</label>
+                    <a href="editPet.html"><img src="../assets/images/mypets/gato1.png" alt="foto-animal"/></a>
+                    <label class="animal-name">Lala</label>
                 </div>
                 <div class="photos-pet">
-                    <a><img src="../images/dog.png" alt="foto-animal"/></a>
-                    <label class="animal-name">Pet 3</label>
+                    <a href="editPet.html"><img src="../assets/images/mypets/perro2.png" alt="foto-animal"/></a>
+                    <label class="animal-name">Mister</label>
                 </div>
                 <div class="photos-pet">
-                    <a><img src="../images/cat.png" alt="foto-animal"/></a>
-                    <label class="animal-name">Pet 4</label>
+                    <a href="editPet.html"><img src="../assets/images/mypets/gato2.png" alt="foto-animal"/></a>
+                    <label class="animal-name">Tina</label>
                 </div>
             </div>
-            <button class="button-form">Add pet</button>
+            <button class="button-form" onclick="location.href='addPet.html'; return false;">Add pet</button>
         </div>
 
         <!-- Aqui va el footer -->
+        <script>loadComponents("../html/components/footer.html", "footer")</script>
+        <footer id="footer" ></footer>
     </body>
 </html>

@@ -5,35 +5,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "icon" type = "image/ico" href = "../logo.ico">
         <title>Edit Pet</title>
+        <link rel="stylesheet" href="../css/components/header.css">
+        <link rel="stylesheet" href="../css/components/footer.css">
+        <script src="../js/loadComponents.js"></script>
         <link rel="stylesheet" href="../css/components/form.css">
     </head>
     <body>
         <!-- Aquí va el header -->
-        
+        <script>loadComponents("../html/components/header.html", "header")</script>
+        <header id="header" ></header>
         <div class="form-animal-position">
             <form class="form-animal" id="form-animal">
-                <h2 id="title-form">Edit Pet</h2>
+                <h2 id="title-form">Editar Mascota</h2>
                 <div class="field-with-text">
-                    <label class ="field-form" for="fname">Field 1:</label><br>
+                    <label class ="field-form" for="fname">Tipo de Mascota:</label><br>
                     <input class="input-form"  type="text" id="fname" name="fname"><br>
                 </div>
                 <div class="field-with-text">
-                    <label class ="field-form" for="lname">Field 2:</label><br>
+                    <label class ="field-form" for="lname">Raza:</label><br>
                     <input class="input-form" type="text" id="lname" name="lname"><br>
                 </div>
                 <div class="field-with-text">
-                    <label class ="field-form" for="lname">Field 3:</label><br>
+                    <label class ="field-form" for="lname">Nombre:</label><br>
                     <input class="input-form"  type="text" id="lname" name="lname"><br>
                 </div>
                 <div class="field-with-text">
-                    <label class ="field-form" for="lname">Field 4:</label><br>
+                    <label class ="field-form" for="lname">Peso:</label><br>
                     <input class="input-form" type="text" id="lname" name="lname"><br>
                 </div>
-                <button class="button-form" id="cancel-button" >Cancel</button>
-                <button type="submit" form="form-animal" class="button-form" value="Submit">Save changes</button>
+                <button class="button-form" id="cancel-button" onclick="location.href='myPets.html'; return false;">Cancel</button>
+                <button type="submit" form="form-animal" class="button-form" value="Submit" onclick="location.href='myPets.html'; return false;">Save changes</button>
             </form>
         </div>
 
         <!-- Aquí va el footer -->
+        <script>loadComponents("../html/components/footer.html", "footer")</script>
+        <footer id="footer" ></footer>
     </body>
 </html>

@@ -15,11 +15,11 @@
     display: grid;
     justify-content: center;
     grid-gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.05rem;
     grid-template-columns: repeat(4, [col] 1fr);
     grid-template-rows: repeat(3, [row] auto);
-    background-color: #fff;
-    color: #444;
+    background-color: #000000;    
+    color: #ffffff;
 }
 
 .column {
@@ -30,6 +30,9 @@
 .row-two, .row-one {
     display: grid;
     align-items: center;
+    cursor: pointer;
+    margin-top: 5px;
+    color: #ffffff;
 }
 
 .column-first {

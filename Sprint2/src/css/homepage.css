@@ -2,13 +2,15 @@
     width: 90%;
     font-size: 2vw;
     height: 10vh;
-    background-color: #D9D9D9;
+    background-color: #CAF729;
     display: flex;
     border-radius: 10px;
+    border: 1px solid black;
     align-items: center;
     justify-content: center;
     margin-left: 40px;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .white-rectangle {
@@ -18,12 +20,16 @@
     background-color: white;
     margin-right: 40px;
     margin-left: 40px;
+    margin-bottom: 10px;
 }
 
 .description-with-text{
-    display: -webkit-inline-box;
+    background-color: #09C184;
+    border-radius: 10px;
+    border: 1px solid black;
     width: 100%;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 #description-text{
@@ -33,13 +39,15 @@
 
 .name-with-description{
     width: 60%;
-    display: inline-block;
+    display:inline-block;
+    
 }
 
 .square {
-    width: calc(25vw + 2rem); 
+    width: calc(25vw + 3rem); 
     border: 1px solid black ;
     border-radius: 5px;
+    margin-left: 60px;
 }
 
 /*Tablet*/
