@@ -12,8 +12,8 @@
 
 .image-rectangle {
     
-    width: 520px;
-    height: 320px;
+    width: 500px;
+    height: 295px;
     border: 1px solid black;
     border-radius: 5px;
     align-items: center;
@@ -91,7 +91,92 @@
 }
 
 /*Tablet*/
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+    .image-rectangle {
+        width: 310px;
+        height: 255px;
+        border: 1px solid black;
+        border-radius: 5px;
+        align-items: center;
+    }
+    
+    .info-rectangle {
+        text-align: center;
+        display: inline-block;
+        width: 40%;
+        
+        background-color: #CAF729;
+        border-radius: 10px;
+        border: 1px black solid;
+    }
+    .text-user{
+        width: 70%;
+        border: none;
+        display: inline-block;
+    }
+    
+    .rectangle{
+        width: 70%;
+        background-color: #ffffff;
+        text-align: left;
+        align-content: center;
+        margin: 0 auto;
+        padding: 10px; 
+        border: 1px black solid;
+        margin: 1rem;
+        border-radius: 10px;
+    }
+    .reseñas{
+        
+        width: 70%;
+        height: calc(18rem + 2vh);
+        text-align: -webkit-center;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-top: 20px;
+    }
+}
 
 /*Movil*/
-@media only screen and (max-width: 750px) {}
+@media only screen and (max-width: 750px) {
+    .daycare-section {
+        background-color: #09C184;
+        display: grid;
+          
+    }
+    .image-rectangle {
+        margin-top: 20px;
+        width: 230px;
+        height: 225px;
+    }
+    .info-rectangle {
+        width: 230px;
+        margin-top: 20px;
+        background-color: #CAF729;
+    }
+    .reseñas-init-page{
+        margin-left: -10px;
+
+    }
+    .reseñas{
+        width: 70%;
+        height: calc(15rem + 2vh);
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+    .image-users{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+    }
+    .text-user{
+        width: 70%;
+        border: none;
+        display: inline-block;
+        font-size: 13px;
+
+    }
+}

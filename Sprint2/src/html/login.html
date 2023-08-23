@@ -7,16 +7,18 @@
         <title>Login</title>
         <link rel="stylesheet" href="../css/components/header.css">
         <link rel="stylesheet" href="../css/components/footer.css">
-        <script src="../js/loadComponents.js"></script>
-        <script src="../js/validateEmail.js"></script>
+        <script src="../js/loadComponents.js" ></script>
+        <script src="../js/validateEmail.js" ></script>
         <link rel="stylesheet" href="../css/components/form.css"> 
+            
+
     </head>
     <body>
         <!-- Aquí va el header -->
         <script>loadComponents("../html/components/header.html", "header")</script>
         <header id="header" ></header>
         <div class="form-login-position">
-            <form class="form-login" id="form-login" onsubmit="return validateEmail()">
+            <form class="form-login" id="form-login" method="post" action="" onsubmit="return enviarMensaje(event)">
                 <h1 id="title-form">LOGIN</h1>  
                 <div class="field-with-text">  
                     <label class="field-form">Email</label><br>
@@ -27,7 +29,7 @@
                     <input class="input-form" type="password" placeholder=" ******"><br>
                 </div>
                 <div class="button-login-position">
-                    <button type="submit" form="form-login" class="button-form login-button" value="Submit" onclick="validateEmail(); return false;">Login</button>
+                    <button type="button" form="form-login" id="log" class="button-form login-button" value="Submit" onclick="lanza_modal()">Login</button>
                 </div>
                 <a class="signup-link" href="../html/signUp.html">Do you already an have account...?</a>
             </form>

@@ -15,38 +15,42 @@
         <script>loadComponents("../html/components/header.html", "header")</script>
         <header id="header" ></header>
         <form class="form-reservation" id="form-reservation">
-            <div class="sections-container">
-                <div class="left-section">
-                    <h2 class="title-reservation">Formulario de reserva</h2>
-                    <div id="fields-inputs">
-                        <label class="field-input-reservation">Campo 1</label>
-                        <input class="input-perfil" placeholder="Campo 1" /><br>
-                        <label class="field-input-reservation">Campo 2</label>
-                        <input class="input-perfil" placeholder="Campo 2" /><br>
-                        <label class="field-input-reservation">Campo 3</label>
-                        <input class="input-perfil" placeholder="Campo 3" /><br>
+            <div class="all-page">
+                <div class="sections-container">
+                    <div class="left-section">
+                        <h2 class="title-reservation">Formulario de reserva</h2>
+                        <div id="fields-inputs">
+                            <label class="field-input-reservation">Campo 1</label>
+                            <input class="input-perfil" placeholder="Campo 1" /><br>
+                            <label class="field-input-reservation">Campo 2</label>
+                            <input class="input-perfil" placeholder="Campo 2" /><br>
+                            <label class="field-input-reservation">Campo 3</label>
+                            <input class="input-perfil" placeholder="Campo 3" /><br>
+                        </div>
                     </div>
-                </div>
-                <div class="right-section">
-                    <h2 class="title-reservation">Elige fechas</h2>
-                    <div id="date-reservation-input">
-                    <label class="date-reservation">De: </label>
-                    <input type="date" class="input-date" id="datePicker"><br>
-                    <label class="date-reservation">Hasta:</label>
-                    <input type="date" class="input-date" id="datePicker">
+                    <div class="right-section">
+                        <h2 class="title-reservation">Elige fechas</h2>
+                        <div id="date-reservation-input">
+                        <label class="date-reservation">De: </label>
+                        <input type="date" class="input-date" id="datePicker"><br>
+                        <label class="date-reservation">Hasta:</label>
+                        <input type="date" class="input-date" id="datePicker">
+                        </div>
                     </div>
+                
                 </div>
+    
+                <div class="second-part">
+                    <div class="availability-section">
+                        <label id="availability-reservation">Disponibilidad: </label>
+                        <button type="button" class="time-box">16:00</button>
+                        <button type="button" class="time-box">17:00</button>
+                        <button type="button" class="time-box">18:00</button>
+                    </div>
+                    <button type="submit" form="form-reservation" class="confirm-button" value="Submit" onclick="location.href='history.html'; return false;">Confirmar Reserva</button>
+                </div>
+            </div>
             
-            </div>
-            <div class="second-part">
-                <div class="availability-section">
-                    <label id="availability-reservation">Disponibilidad: </label>
-                    <button type="button" class="time-box">16:00</button>
-                    <button type="button" class="time-box">17:00</button>
-                    <button type="button" class="time-box">18:00</button>
-                </div>
-                <button type="submit" form="form-reservation" class="confirm-button" value="Submit" onclick="location.href='history.html'; return false;">Confirmar Reserva</button>
-            </div>
         <form>
         
         <!-- Aqui va el footer-->
