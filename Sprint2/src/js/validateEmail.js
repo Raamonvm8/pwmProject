@@ -54,10 +54,7 @@ function lanza_modal() {
         }
 
     }
-
-    
-    
-    
+  
 }
 
 
