@@ -1,3 +1,7 @@
+.todo{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
 .app-name {
     width: 90%;
     font-size: 2vw;
@@ -8,7 +12,7 @@
     border: 1px solid black;
     align-items: center;
     justify-content: center;
-    margin-left: 40px;
+    margin-left: 60px;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -30,6 +34,7 @@
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+    margin-left: 30px;
 }
 
 #description-text{
@@ -54,4 +59,46 @@
 @media only screen and (max-width: 1200px) {}
 
 /*Movil*/
-@media only screen and (max-width: 750px) {}
+@media only screen and (max-width: 750px) {
+    .todo{
+        background-color: #09C184;
+    }
+    .app-name {
+        width: 167%;
+        font-size: 7vw;
+        height: 10vh;
+        border-radius: 0px;
+        border: none;
+        margin-left: 0px;
+        text-align: center;
+        margin-bottom: 0rem;
+        margin-top: 0rem;
+    }
+    .description-with-text{
+        border-radius: 0px;
+        border: none;
+        width: 167%;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+    .square {
+        width: calc(20vw + 3rem); 
+        border: 1px solid black ;
+        border-radius: 5px;
+        margin-left: 120px;
+        margin-bottom: 2rem;
+    }
+    #description-text{
+        font-size: 20px;
+    }
+    .white-rectangle {
+        font-size: calc(0.6rem + 0.7vw);
+        width: 60vw;
+        height: calc(6rem + 20vh);
+        background-color: white;
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-bottom: 10px;
+    }
+}

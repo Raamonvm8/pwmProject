@@ -34,4 +34,10 @@ tr:nth-child(even) {
 @media only screen and (max-width: 1200px) {}
 
 /*Movil*/
-@media only screen and (max-width: 750px) {}
+@media only screen and (max-width: 750px) {
+    .table-page{
+        justify-content: center;
+        text-align: -webkit-center;
+        background-color: #09C184;
+    }
+}

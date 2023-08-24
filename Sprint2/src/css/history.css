@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
 .left-section,
@@ -65,4 +66,29 @@
 @media only screen and (max-width: 1200px) {}
 
 /*Movil*/
-@media only screen and (max-width: 750px) {}
+@media only screen and (max-width: 750px) {
+    .page {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .left-section,
+    .right-section {
+        width: 100%;
+        height: calc(15rem + 10vh);
+        border: 1px solid black;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .title-section-history {
+        font-size: 1.2rem;
+    }
+    .white-box {
+        width: 85%;
+        height: calc(4rem + 2vw);
+        font-size: calc(0.7rem + 0.2vw);
+        margin-top: 1rem; 
+    }
+}
