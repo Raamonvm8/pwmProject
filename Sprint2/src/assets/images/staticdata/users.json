@@ -10,15 +10,15 @@
         },
         {
         "id": 2,
-        "Nombre": "Pepe",
-        "email": "pepe@gmail.com",
+        "Nombre": "Alejandro",
+        "email": "ale@gmail.com",
         "password": "12345678",
         "administrador": false
         },
         {
         "id": 3,
-        "Nombre": "Jorge",
-        "email": "jorge@gmail.com",
+        "Nombre": "Marta",
+        "email": "marta@gmail.com",
         "password": "12345678",
         "administrador": false
         }
