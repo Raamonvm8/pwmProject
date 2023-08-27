@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página</title>
-    <link rel="stylesheet" href="../css/components/header.css">
-    <link rel="stylesheet" href="../css/components/footer.css">
-    <script src="../js/loadComponents.js"></script>
-    <link rel="stylesheet" href="../css/aboutUs.css">
+    <title>About Us</title>
 </head>
-<body>
+<body id="body-form">
+    <!-- Bootstrap dependencies -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <!-- Font awesome dependencies -->
+    <script src="https://kit.fontawesome.com/9cdb4512b3.js" crossorigin="anonymous"></script>
+    
+    <!-- Dynamic load of the header -->
+    <script src="../js/loadComponents.js"></script>
     <script>loadComponents("../html/components/header.html", "header")</script>
-    <header id="header" ></header>
+    <header id="header"></header>
 
+    <!-- Body page -->
     <div class="container">
-        <div class="rectangle1">
-            <h2>Sobre Nosotros</h2>
+        <div class="section section-about">
+            <h2 id="aboutUs-title"><strong>Discover Canine Care Connect</strong></h2>
         </div>
-        <div class="rectangle2">
-            <div class="inner-rectangle">
-                <p>Somos una asociación que reúne todas las residencias caninas que hay en la isla de gran canaria.</p>
+        <div class="section section-info">
+            <div class="inner-section">
+                <p>Welcome to <span class="highlight">Canine Care Connect</span> where tail-wagging happiness meets exceptional care! As devoted pet lovers ourselves, we're committed to offering a <span class="highlight">pawsitively</span> delightful experience for pet parents seeking premium care for their cherished pups right here in Gran Canaria.</p>
+                <p>Our mission? To <span class="highlight">bridge the gap</span> between pet parents and the finest canine accommodations across the island. We know how daunting it can be to find the pawfect place for your fur babies while you're away, and that's where we come in. By collaborating with a network of esteemed dog boarding facilities, we provide an all-encompassing solution that fulfills both your needs and your pets' desires.</p>
+                <p>At <span class="highlight">Canine Care Connect</span>, we deeply treasure the bond between humans and their canine companions. Our dedicated team ensures that your furry pals receive unmatched attention, safety, and a <span class="highlight">home-away-from-home</span> experience. With a keen focus on comfort, security, and tailor-made services, we're dedicated to ensuring your pets' stay is as delightful as possible.</p>
+                <p>Join us in crafting a <span class="highlight">joyful and worry-free journey</span> for you and your cherished pets. Let's embark on this adventure of trust, compassion, and wagging tails together!</p>
             </div>
         </div>
     </div>
+
+    <!-- Dynamic load of the footer -->
     <script>loadComponents("../html/components/footer.html", "footer")</script>
-        <footer id="footer" ></footer>
+    <footer id="footer" style="margin-top: auto;"></footer>
+
+    <!-- Applying styles here for optimization -->
+    <link rel="stylesheet" type="text/css" href="../css/aboutUs.css" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" type="text/css" href="../css/components/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/components/footer.css">
 </body>
 </html>
