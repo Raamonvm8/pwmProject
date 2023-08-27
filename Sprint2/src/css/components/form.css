@@ -20,20 +20,20 @@ body {
     background-color: #0b8e68;
 }
 
-.form-login-position, .form-register-position {
+.form-login-position, .form-register-position, .form-animal-position {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0 2rem;
 }
-.form-register-position{
+.form-register-position, .form-animal-position{
     margin-bottom: 2rem;
 }
 .form-register{
     width: 30%;
 }
-.form-login, .form-register {
+.form-login, .form-register, .form-animal {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 40px 20px 40px rgba(0, 0, 0, 0.1);
