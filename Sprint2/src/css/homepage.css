@@ -1,59 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+
+    padding: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container-homepage{
+    margin-top: 8rem;
+}
+
 .todo{
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
 .app-name {
-    width: 90%;
+    width: 60%;
     font-size: 2vw;
+    font-weight: bold;
     height: 10vh;
-    background-color: #CAF729;
+    background-color: #07F9A2;
     display: flex;
     border-radius: 10px;
-    border: 1px solid black;
     align-items: center;
     justify-content: center;
     margin-left: 60px;
     text-align: center;
     margin-bottom: 2rem;
+    color: white;
+    box-shadow: 2px 10px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.header-image-container{    
+    font-weight: bold;
+    font-style: unset;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .white-rectangle {
     font-size: calc(1rem + 0.7vw);
     width: 50vw;
-    height: calc(5rem + 20vh);
+    max-width: 800px;
+    height: auto;
     background-color: white;
-    margin-right: 40px;
-    margin-left: 40px;
-    margin-bottom: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 
 .description-with-text{
-    background-color: #09C184;
+    background-color: #07F9A2;
     border-radius: 10px;
-    border: 1px solid black;
-    width: 100%;
-    text-align: center;
+    width: 90%;
+    height: auto;
+    padding-bottom: 2rem;
     margin-bottom: 50px;
     margin-left: 30px;
+    color: black;
+    box-shadow: 9px 16px 4px rgba(0, 0, 0, 0.1);
 }
 
 #description-text{
     display: inline-block;
+    text-align: left;
+    color: white;
+    font-weight: bold;
     font-size: calc(2rem + 0.7vw);
+    margin: 1rem 0;
 }
 
 .name-with-description{
     width: 60%;
     display:inline-block;
-    
+    text-align: -webkit-center;
+}
+.managemnet-carousel{
+    width: 36%;
+    max-width: 36%;
+    max-height: 36%;
+    display: inline-block;
+    margin-left: 1rem;
+    border-radius: 2rem;
+    border: none;
 }
 
 .square {
     width: calc(25vw + 3rem); 
-    border: 1px solid black ;
-    border-radius: 5px;
+    height: calc(25vw + 3rem);
+    border-radius: 10px;
     margin-left: 60px;
+    box-shadow: 9px 16px 4px rgba(0, 0, 0, 0.1);
 }
+
+.text-homepage-picture{
+    text-align: left;
+}
+
+/* Changes in carousel */
+.carousel-caption-overlay {
+    bottom: 0;
+    position: absolute;
+    margin-left: 3.8rem;
+    width: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: opacity 0.3s;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    opacity: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-caption-overlay:hover {
+    opacity: 1; /* Mostrar la capa oscura y el texto cuando se coloque el ratón sobre la imagen */
+}
+
+.carousel-caption-overlay h5, .carousel-caption-overlay p {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: auto;
+    height: 20%;
+    margin: 4rem;
+    top: 15%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); 
+    border: none;
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: 0;
+    padding: 0.5rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.carousel-control-next {
+    right: 0;
+    margin-right: 0.3rem;
+    padding: 0.5rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+/* ---------------------------------- */
 
 /*Tablet*/
 @media only screen and (max-width: 1200px) {}
@@ -70,21 +168,16 @@
         border-radius: 0px;
         border: none;
         margin-left: 0px;
-        text-align: center;
         margin-bottom: 0rem;
         margin-top: 0rem;
     }
     .description-with-text{
         border-radius: 0px;
         border: none;
-        width: 167%;
-        text-align: center;
         margin-bottom: 30px;
         margin-left: 0px;
     }
     .square {
-        width: calc(20vw + 3rem); 
-        border: 1px solid black ;
         border-radius: 5px;
         margin-left: 120px;
         margin-bottom: 2rem;
@@ -94,11 +187,12 @@
     }
     .white-rectangle {
         font-size: calc(0.6rem + 0.7vw);
-        width: 60vw;
-        height: calc(6rem + 20vh);
+        width: 30vw;
+        height: calc(20rem + 20vh);
         background-color: white;
         margin-right: 40px;
         margin-left: 40px;
         margin-bottom: 10px;
+        text-align: left;
     }
 }
