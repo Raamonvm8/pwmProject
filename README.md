@@ -1,9 +1,9 @@
 # Proyecto de PWM sobre una guaderia de mascotas 2023.<br>
 
-1 Sprint -> Mockup con HTML y CSS<br>
+<p><input type="checkbox" checked>1 Sprint -> Mockup con HTML y CSS<br></p>
 
-2 Strint -> Diseño final con HTML, CSS y JavaScript<br>
+<p><input type="checkbox" checked>2 Sprint -> Diseño final con HTML, CSS y JavaScript<br></p>
 
-3 Sprint -> Diseño final con Angular y Firebase<br>
+<p><input type="checkbox" disabled>3 Sprint -> Diseño final con Angular y Firebase<br></p>
 
-4 Sprint -> Version Beta con IONIC<br>
+<p><input type="checkbox" disabled>4 Sprint -> Versión Beta con IONIC<br></p>
