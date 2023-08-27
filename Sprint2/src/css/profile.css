@@ -1,34 +1,46 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .profile-page {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: -webkit-center;
-    margin-bottom: 2rem;
-} 
-
-.input-perfil {
-    margin-top: 1rem;
-    width: 80%;
-    height: 2rem;
-    margin-bottom: 1rem;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.button-profile{
-    width: 10rem;
-    border-radius: 4px;
-    height: 3rem;
-    margin: 2rem;
-    margin-top: 0;
+.input-profile {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16px;
+    color: #333;
 }
 
 .main-rectangle {
-    width: 80%;
-    height: calc(22rem + 10vh);
-    border: 1px solid #000000;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0%;
+    background-color: #F7F7F7;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .vertical-line {
@@ -40,51 +52,172 @@
 .left-section,
 .right-section {
     width: calc(50% - 1px);
-    height: 430px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.left-section{
-    background-color: #09C184;
+
+.left-section {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
 }
-.right-section{
+
+.right-section {
     background-color: #01DCC3;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
 }
 
 .profile-photo {
-    width: 12rem;
-    height: 12rem;
-    background-color: white;
-    border: 1px solid gray;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 5px solid white;
+}
+
+.photo-label {
+    font-size: 16px;
+    color: #777;
+    margin-top: 0.5rem;
 }
 
 .action-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .action-menu {
-    width: 80%;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    padding: 2rem;
     background-color: #09C184;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px black solid;
-    border-radius: 5px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+#title-personal-information{
+    color: #01DCC3;
+}
+.input-label{
+    font-weight: bold;
+    font-size: medium;
+    text-align: left;
+    justify-content: left;
+}
+.input-total-profile{
+    text-align: left;
 }
 
-.field-input-profile{
-    margin-right: auto;
-    margin-left: calc(0.5rem + 3vw)
+.section-title {
+    color: #09C184;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    justify-content: center;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.input-container {
+    margin-bottom: 1rem;
+    text-align: left;
+    justify-content: left;
+    align-items: start;
+}
+
+#foto-perfil-profile {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Estilos para los botones */
+.action-button {
+    margin: 0 10px;
+}
+
+.transparent-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.transparent-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.action-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.action-text {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+/* Estilos para los botones de mascotas y reservas */
+.pet-reservation-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.pet-button,
+.reservation-button {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    color: #555;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.pet-button i,
+.reservation-button i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.pet-button:hover,
+.reservation-button:hover {
+    color: #333;
+}
+
+#hr-line{
+    border: 1px solid #ccc;
+    width: 80%;
+    margin: 1rem auto;
 }
 
 /*Tablet*/
@@ -131,7 +264,6 @@
         align-items: center;
         justify-content: center;
         background-color: #01DCC3;
-        border: 1px solid black;
         border-radius: 5px;
     }
     .vertical-line {
@@ -147,16 +279,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px black solid;
         border-radius: 5px;
         margin-left: 60px;
         margin-top: 0%;
-    }
-    .action-buttons {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
     }
 
 
@@ -207,7 +332,6 @@
         justify-content: center;
         margin-top: 0px;
         background-color: #01DCC3;
-        border: 1px solid black;
         border-radius: 5px;
         font-size: 15px;
     }
@@ -224,7 +348,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px black solid;
         border-radius: 5px;
         margin-top: 60px;
         margin-left: -20px;
