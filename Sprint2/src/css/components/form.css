@@ -6,17 +6,30 @@ body {
     margin-top: 100px;
 }
 
-#log{
+#log, #save-button, #cancel-button{
     width: 100%;
     padding: 10px;
     border-radius: 10px;
-    background-color: #09C184;
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
-#log:hover{
+
+#log, #save-button{
+    background-color: #09C184;
+}
+
+#cancel-button{
+    background-color: #c15309;
+    margin-bottom: 1rem;
+}
+
+#cancel-button:hover{
+    background-color: #7a3608;
+}
+
+#log:hover, #save-button:hover {
     background-color: #0b8e68;
 }
 
@@ -30,7 +43,7 @@ body {
 .form-register-position, .form-animal-position{
     margin-bottom: 2rem;
 }
-.form-register{
+.form-register, .form-animal{
     width: 30%;
 }
 .form-login, .form-register, .form-animal {
