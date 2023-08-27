@@ -1,87 +1,102 @@
-.form-animal-position, .form-login-position, .form-register-position {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    margin-top: 100px;
+}
+
+#log{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #09C184;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#log:hover{
+    background-color: #0b8e68;
+}
+
+.form-login-position, .form-register-position {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin-left: 2rem;
+    margin: 0 2rem;
+}
+.form-register-position{
+    margin-bottom: 2rem;
+}
+.form-register{
+    width: 30%;
+}
+.form-login, .form-register {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 40px 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #ffffff;
 }
 
 #title-form {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #333;
 }
 
-.login-button2{
+.field-with-text {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.field-form {
+    font-size: 1rem;
     display: block;
-    width: calc(8vw + 0.4rem);
-    height: calc(5vh + 0.1rem);
-    border-radius: 10px;
-    background-color: #F5F5F5;
-    font-size: calc(1.4vh + 0.4rem);
-    text-align: center;
+    color: #555;
+}
+
+.required {
+    color: #ff0000;
+    margin-left: 3px;
+}
+
+.input-form {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.button-login-position {
+    margin-top: 1.5rem;
 }
 
 .signup-link {
     font-size: 1rem;
-    margin-top: 1000rem;
-    text-decoration: underline;
-    cursor: pointer;
-    color: blue;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: #0099cc;
+    display: inline-block;
+    transition: color 0.3s;
 }
 
-.button-login-position{
-    text-align: center;
-    text-align: -webkit-center;
+.signup-link:hover {
+    color: #0077aa;
 }
-
-.form-animal, .form-login, .form-register {
-    padding: 1rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background-color: #09C184;
-}
-
-.field-form {
-    font-size: calc(0.5vw + 0.6rem);
-    display: flex;
-    align-items: center; /* Alinea verticalmente la etiqueta y el campo */
-}
-
-.label-form {
-    width: 150px; /* Ajusta el ancho de la etiqueta según tus necesidades */
-    text-align: right;
-    margin-right: 1rem; /* Crea espacio entre la etiqueta y el campo */
-}
-
-.input-form {
-    width: calc(20vw + 0.5rem);
-    height: calc(2vw + 0.1rem);
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
-
-.button-form {
-    width: calc(10vw + 0.4rem);
-    height: calc(5vh + 0.1rem);
-    border-radius: 10px;
-    background-color: #D7FEF9;
-    font-size: calc(1vh + 0.3rem);
-}
-
-#cancel-button{
-    margin-right: 20px;
-}
-
 /*Tablet*/
 @media only screen and (max-width: 1200px) {
-    .form-animal-position, .form-login-position, .form-register-position {
+    .form-animal-position,
+    .form-login-position,
+    .form-register-position {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        margin-left: 2rem;
+        margin: 0 2rem; /* Ajusta el margen izquierdo y derecho */
     }
     
 }
