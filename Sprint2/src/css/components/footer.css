@@ -1,3 +1,4 @@
+
 .logo {
     width: 4rem;
     height: 4rem;
@@ -7,8 +8,26 @@
     justify-content: center;
 }
 
+.row-one, .row-two{
+    text-decoration: none;
+}
+
 .footer-section {
-    border-top: 1px solid black;
+    border-top: 1px solid #ccc;
+    background-color: #112d38;
+    color: #fff;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+#logo-footer-icon{
+    font-size: 4rem;
+    margin-left: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#pets-life-title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .wrapper {
@@ -17,12 +36,14 @@
     grid-gap: 1rem;
     margin-top: 0.05rem;
     grid-template-columns: repeat(4, [col] 1fr);
-    grid-template-rows: repeat(3, [row] auto);
-    background-color: #000000;    
+    grid-template-rows: repeat(3, [row] auto);   
     color: #ffffff;
+    
 }
 
 .column {
+    font-size: 1rem;
+    margin-bottom: 1rem;
     grid-row: 1;
     padding: 1rem;
 }
@@ -33,6 +54,17 @@
     cursor: pointer;
     margin-top: 5px;
     color: #ffffff;
+    transition: color 0.3s;
+}
+.row-two{
+    margin-top: 1rem;
+}
+.title-fotter-section{
+    color: #61f5eb;
+}
+
+.row-one:hover, .row-two:hover {
+    color: #07F9A2;
 }
 
 .column-first {
@@ -56,7 +88,15 @@
 }
 
 /*Tablet*/
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+    .footer-section{
+        display: none;
+    }
+}
 
 /*Movil*/
-@media only screen and (max-width: 750px) {}
+@media only screen and (max-width: 750px) {
+    .footer-section{
+        display: none;
+    }
+}
