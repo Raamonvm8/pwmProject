@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-
     padding: 0;
     background-color: #f7f7f7;
     display: flex;
@@ -120,7 +119,7 @@ body {
     opacity: 1; /* Mostrar la capa oscura y el texto cuando se coloque el ratón sobre la imagen */
 }
 
-.carousel-caption-overlay h5, .carousel-caption-overlay p {
+.carousel-caption-overlay, .carousel-caption-overlay p {
     color: white;
     text-align: center;
     padding: 10px;
@@ -134,7 +133,7 @@ body {
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5); 
     border: none;
-    z-index: 1;
+    z-index: 3;
 }
 
 .carousel-control-prev {
