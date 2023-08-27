@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "icon" type = "image/ico" href = "../logo.ico">
-    <title>Add animal</title>
+    <title>Add Pet</title>
 </head>
 
-<body  id="body-form">
+<body id="body-form">
     <!-- Dinamic load of the header -->
     <script src="../js/loadComponents.js"></script>
     <script>loadComponents("../html/components/header.html", "header")</script>
@@ -16,28 +16,28 @@
     <!-- Body page -->
     <div class="form-animal-position h-75">
         <form class="form-animal" id="form-animal">
-            <p id="title-form"><strong>Datos de la mascota<strong></p>
+            <h2 id="title-form">Add Pet</h2>
             <div class="field-with-text">
-                <label class ="field-form" for="fname">Tipo de mascota: <span class="required">*</span></label><br>
+                <label class ="field-form" for="fname">Type of pet: <span class="required">*</span></label><br>
                 <input class="input-form"  type="text" id="fname" name="fname"><br>
             </div>
             <div class="field-with-text">
-                <label class ="field-form" for="lname">Raza: <span class="required">*</span></label><br>
+                <label class ="field-form" for="lname">Breed: <span class="required">*</span></label><br>
                 <input class="input-form" type="text" id="lname" name="lname"><br>
             </div>
             <div class="field-with-text">
-                <label class ="field-form" for="lname">Nombre: <span class="required">*</span></label><br>
+                <label class ="field-form" for="lname">Name: <span class="required">*</span></label><br>
                 <input class="input-form"  type="text" id="lname" name="lname"><br>
             </div>
             <div class="field-with-text">
-                <label class ="field-form" for="lname">Peso: <span class="required">*</span></label><br>
+                <label class ="field-form" for="lname">Weight: <span class="required">*</span></label><br>
                 <input class="input-form" type="text" id="lname" name="lname"><br>
             </div>
-            <button type="submit" form="form-animal" id="log"  class="button-form login-button" value="Submit" onclick="location.href='myPets.html'; return false;">New pet</button>
+            <button type="submit" form="form-animal" id="log"  class="button-form login-button" value="Submit" onclick="location.href='myPets.html';">New pet</button>
         </form>
-    </div>
-
-    <!-- Dinamic load of the footer -->
+    </div> 
+    
+    <!-- Dynamic load of the footer -->
     <script>loadComponents("../html/components/footer.html", "footer")</script>
     <footer id="footer" style="margin-top: auto;"></footer>
 
