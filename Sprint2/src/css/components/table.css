@@ -1,33 +1,100 @@
-#table-administration {
-    border-collapse: collapse;
-    justify-content: center;
-    width: 80%;
-    margin-bottom: 4rem;
-
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.td-table{
-    text-align: left;
-    height: 50px;
-    vertical-align: bottom;
-    border: 1px black solid;
+.table-page-administration-user {
+    justify-content: center;
+    text-align: -webkit-center;    
+}
+
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#search-input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#search-icon {
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+.operation-icon {
+    font-size: 1.2rem;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: right;
+}
+
+#table-administration {
+    width: 80%;
+    margin-bottom: 4rem;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.th-table {
+    background-color: #15D696;
+    color: white;
+    font-weight: bold;
+    text-align: center;
     padding: 15px;
 }
 
-.field-table{
-    font-size: calc(0.8rem + 0.5vw);
-}
-.th-table{
-    background-color: #f2f2f2;
-    border: 1px black solid;
-}
-.table-page{
-    justify-content: center;
-    text-align: -webkit-center;
+.td-table {
+    text-align: left;
+    height: 50px;
+    vertical-align: middle;
+    padding: 15px;
+    font-size: 16px;
 }
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+.field-table {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+tr:hover {
+    background-color: #8f8f8f;
+    color: white;
+    transition: background-color 0.3s;
 }
 
 /*Tablet*/
