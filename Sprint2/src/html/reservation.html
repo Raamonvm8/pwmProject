@@ -17,34 +17,91 @@
         <div class="all-page">
             <div class="sections-container">
                 <div class="left-section">
-                    <h2 class="title-reservation">Formulario de reserva</h2>
+                    <h2 class="title-reservation">Reservation Form</h2>
                     <div id="fields-inputs">
-                        <label class="field-input-reservation">Campo 1</label>
-                        <input class="input-perfil" placeholder="Campo 1" /><br>
-                        <label class="field-input-reservation">Campo 2</label>
-                        <input class="input-perfil" placeholder="Campo 2" /><br>
-                        <label class="field-input-reservation">Campo 3</label>
-                        <input class="input-perfil" placeholder="Campo 3" /><br>
+                        <label class="field-input-reservation">Pet 1</label>
+                        <select class="input-perfil" id="selector-pet-first" name="pet1">
+                            <option value="pet_id_0"></option>
+                            <option value="pet_id_1">Buddy</option>
+                            <option value="pet_id_2">Whiskers</option>
+                            <option value="pet_id_3">Nemo</option>
+                            <!-- Add more pet options if needed -->
+                        </select><br>
+                        
+                        <label class="field-input-reservation">Pet 2</label>
+                        <select class="input-perfil" id="selector-pet-second" name="pet2">
+                            <option value="pet_id_0"></option>
+                            <option value="pet_id_1">Buddy</option>
+                            <option value="pet_id_2">Whiskers</option>
+                            <option value="pet_id_3">Nemo</option>
+                            <!-- Add more pet options if needed -->
+                        </select><br>
+                        
+                        <label class="field-input-reservation">Pet 3</label>
+                        <select class="input-perfil" id="selector-pet-third" name="pet3">
+                            <option value="pet_id_0"></option>
+                            <option value="pet_id_1">Buddy</option>
+                            <option value="pet_id_2">Whiskers</option>
+                            <option value="pet_id_3">Nemo</option>
+                            <!-- Add more pet options if needed -->
+                        </select><br>
+                        
+                        <label class="field-input-reservation">Daycare</label>
+                        <input class="input-perfil" placeholder="Aquatic Oasis" readonly /><br>
+                        
+                        <label class="field-input-reservation">Addition 1</label>
+                        <select class="input-perfil" id="selector-addition-first" name="addition1">
+                            <option value="service_id_0"></option>
+                            <option value="service_id_1">Grooming</option>
+                            <option value="service_id_2">Playroom Access</option>
+                            <option value="service_id_3">Feeding Service</option>
+                            <!-- Add more service options if needed -->
+                        </select><br>
+                        
+                        <label class="field-input-reservation">Addition 2</label>
+                        <select class="input-perfil" id="selector-addition-second" name="addition2">
+                            <option value="service_id_0"></option>
+                            <option value="service_id_1">Grooming</option>
+                            <option value="service_id_2">Playroom Access</option>
+                            <option value="service_id_3">Feeding Service</option>
+                            <!-- Add more service options if needed -->
+                        </select><br>
+                        
+                        <label class="field-input-reservation">Addition 3</label>
+                        <select class="input-perfil" id="selector-addition-third" name="addition3">
+                            <option value="service_id_0"></option>
+                            <option value="service_id_1">Grooming</option>
+                            <option value="service_id_2">Playroom Access</option>
+                            <option value="service_id_3">Feeding Service</option>
+                            <!-- Add more service options if needed -->
+                        </select><br>
                     </div>
                 </div>
+                
                 <div class="right-section">
-                    <h2 class="title-reservation">Elige fechas</h2>
+                    <div id="title-choose-date-label">
+                        <h2 class="title-reservation">Choose Date</h2>
+                    </div>
                     <div id="date-reservation-input">
-                        <label class="date-reservation">De: </label>
+                        <label class="date-reservation">Check in: </label>
                         <input type="date" class="input-date" id="datePicker"><br>
-                        <label class="date-reservation">Hasta:</label>
+                        <label class="date-reservation">Check out:</label>
                         <input type="date" class="input-date" id="datePicker">
                     </div>
-                </div>
-            </div>
-            <div class="second-part">
-                <div class="availability-section">
-                    <label id="availability-reservation">Disponibilidad: </label>
-                    <button type="button" class="time-box">16:00</button>
-                    <button type="button" class="time-box">17:00</button>
-                    <button type="button" class="time-box">18:00</button>
-                </div>
-                <button type="submit" form="form-reservation" class="confirm-button" value="Submit" onclick="location.href='history.html'; return false;">Confirmar Reserva</button>
+                    <label class="field-input-total-price">Total price:</label>
+                    <input class="input-date" placeholder="15€" id="input-field-total-price"/>
+                    <div id="label-availability-reservation">
+                        <h4 id="availability-reservation">Availability: </h><br>
+                    </div>
+                    <div class="availability-section">
+                        <button type="button" class="time-box">16:00</button>
+                        <button type="button" class="time-box">17:00</button>
+                        <button type="button" class="time-box">18:00</button>
+                    </div>
+                    <div id="button-position-reservation">
+                        <button type="submit" form="form-reservation" class="confirm-button" value="Submit" onclick="location.href='history.html'">Confirm</button>
+                    </div>
+                </div>                
             </div>
         </div>   
     </form>
