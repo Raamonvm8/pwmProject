@@ -1,3 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .all-page{
     margin-top: 5rem;
     margin-bottom: 5rem;
