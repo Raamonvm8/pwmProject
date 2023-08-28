@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Usuario1",
+      "surname": "Apellido1",
+      "email": "usuario1@example.com",
+      "password": "contraseña1",
+      "photo": "url_foto_1.jpg",
+      "pets": 2,
+      "reservations": 3,
+      "idPets": ["pet_id_1", "pet_id_2"],
+      "idReservations": ["reservation_id_1", "reservation_id_2", "reservation_id_3"]
+    },
+    {
+      "id": "2",
+      "name": "Usuario2",
+      "surname": "Apellido2",
+      "email": "usuario2@example.com",
+      "password": "contraseña2",
+      "photo": "url_foto_2.jpg",
+      "pets": 1,
+      "reservations": 2,
+      "idPets": ["pet_id_3"],
+      "idReservations": ["reservation_id_4", "reservation_id_5"]
+    },
+    {
+      "id": "3",
+      "name": "Usuario3",
+      "surname": "Apellido3",
+      "email": "usuario3@example.com",
+      "password": "contraseña3",
+      "photo": "url_foto_3.jpg",
+      "pets": 0,
+      "reservations": 1,
+      "idPets": [],
+      "idReservations": ["reservation_id_6"]
+    }
+  ]
+}
