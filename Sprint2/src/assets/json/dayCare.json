@@ -1,0 +1,61 @@
+{
+  "daycare": [
+    {
+      "id": "daycare1",
+      "name": "Paw Paradise",
+      "location": "123 Main Street, City",
+      "description": "A cozy and fun daycare for your furry friends.",
+      "services": ["Playtime", "Grooming", "Training"],
+      "pricePerDay": "$30",
+      "otherInformation": "All staff are certified pet trainers.",
+      "reviews": [
+        {
+          "userId": "user1",
+          "message": "My dog loves it here! He always comes back happy."
+        },
+        {
+          "userId": "user2",
+          "message": "Friendly staff and great facilities. Highly recommended."
+        }
+      ]
+    },
+    {
+      "id": "daycare2",
+      "name": "Feline Haven",
+      "location": "456 Maple Avenue, Town",
+      "description": "A purrfect place for your beloved cats.",
+      "services": ["Playroom", "Catnip Treats", "Nap Time"],
+      "pricePerDay": "$25",
+      "otherInformation": "We specialize in providing a stress-free environment for cats.",
+      "reviews": [
+        {
+          "userId": "user3",
+          "message": "My cats are always so relaxed after their stay here."
+        },
+        {
+          "userId": "user4",
+          "message": "The staff genuinely cares for the cats. Fantastic!"
+        }
+      ]
+    },
+    {
+      "id": "daycare3",
+      "name": "Aquatic Oasis",
+      "location": "789 Ocean Road, Coastal Town",
+      "description": "A wonderful place for your aquatic pets.",
+      "services": ["Custom Tanks", "Feeding Service", "Water Quality Checks"],
+      "pricePerDay": "$20",
+      "otherInformation": "Our experts ensure a comfortable environment for aquatic life.",
+      "reviews": [
+        {
+          "userId": "user5",
+          "message": "My fish have never been happier! Thank you!"
+        },
+        {
+          "userId": "user6",
+          "message": "Top-notch service for fish enthusiasts. Five stars!"
+        }
+      ]
+    }
+  ]
+}
