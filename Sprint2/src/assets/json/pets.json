@@ -1,0 +1,31 @@
+{
+  "pets": [
+    {
+      "id": "pet1",
+      "idOwner": "owner1",
+      "name": "Buddy",
+      "weight": "12",
+      "photo": "buddy.jpg",
+      "typeOfPet": "Dog",
+      "breed": "Labrador"
+    },
+    {
+      "id": "pet2",
+      "idOwner": "owner2",
+      "name": "Whiskers",
+      "weight": "5",
+      "photo": "whiskers.jpg",
+      "typeOfPet": "Cat",
+      "breed": "Siamese"
+    },
+    {
+      "id": "pet3",
+      "idOwner": "owner3",
+      "name": "Nemo",
+      "weight": "0.5",
+      "photo": "nemo.jpg",
+      "typeOfPet": "Fish",
+      "breed": "Clownfish"
+    }
+  ]
+}
