@@ -1,0 +1,20 @@
+{
+    "services": [
+      {
+        "name": "Web Design",
+        "icon": "fas fa-desktop",
+        "description": "Create visually appealing and user-friendly websites that leave a lasting impression on your audience."
+      },
+      {
+        "name": "Digital Marketing",
+        "icon": "fas fa-chart-line",
+        "description": "Boost your online presence with data-driven strategies, social media campaigns, and targeted advertising."
+      },
+      {
+        "name": "Mobile App Development",
+        "icon": "fas fa-mobile-alt",
+        "description": "Design and build intuitive mobile applications that provide seamless experiences on various platforms."
+      }
+    ]
+  }
+  
