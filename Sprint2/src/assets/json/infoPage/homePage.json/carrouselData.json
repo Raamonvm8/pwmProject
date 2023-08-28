@@ -1,0 +1,20 @@
+{
+    "carousel": [
+      {
+        "title": "Explore the Wilderness",
+        "description": "Discover the beauty of untouched nature.",
+        "imageUrl": "https://example.com/wilderness.jpg"
+      },
+      {
+        "title": "City Lights at Night",
+        "description": "Experience the vibrant nightlife of the city.",
+        "imageUrl": "https://example.com/citylights.jpg"
+      },
+      {
+        "title": "Relax on the Beach",
+        "description": "Unwind and enjoy the soothing waves.",
+        "imageUrl": "https://example.com/beach.jpg"
+      }
+    ]
+  }
+  
