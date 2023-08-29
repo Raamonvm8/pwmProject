@@ -9,7 +9,17 @@
 <body id="body-form">
     <!-- Dynamic load of the header -->
     <script src="../js/loadComponents.js"></script>
-    <script>loadComponents("../html/components/header.html", "header")</script>
+    <script src="../js/validateLogin.js"></script>
+    <script src="../js/logOut.js"></script>
+    <script src="../js/loadPets.js"></script>
+    <script>
+        const userData = JSON.parse(localStorage.getItem('user_data'));
+        if (userData) {
+            loadHeader(userData);
+        } else {
+            loadComponents("../html/components/header.html", "header");
+        }
+    </script>
     <header id="header"></header>
  
     <!-- Body page -->
@@ -18,7 +28,7 @@
             <h2 id="title-form">Edit Pet</h2>
             <div class="field-with-text">
                 <label class ="field-form" for="lname">Name:</label><br>
-                <input class="input-form"  type="text" id="lname" name="lname"><br>
+                <input class="input-form"  type="text" id="lname" name="lname" placeholder="${pet.name}"><br>
             </div>
             <div class="field-with-text">
                 <label class ="field-form" for="lweight">Weight:</label><br>
@@ -36,10 +46,32 @@
                 <label class ="field-form" for="lbreed">Breed:</label><br>
                 <input class="input-form" type="text" id="lbreed" name="lbreed"><br>
             </div>
-            <button class="button-form login-button" id="cancel-button" onclick="location.href='myPets.html'">Cancel</button>
-            <button type="submit" form="form-animal" class="button-form login-button" id="save-button" value="Submit" onclick="location.href='myPets.html'">Save changes</button>
+            <button class="button-form login-button" id="cancel-button" onclick="location.href='mypets.html'">Cancel</button>
+            <button type="submit" form="form-animal" class="button-form login-button" id="save-button" value="Submit" onclick="location.href='mypets.html'">Save changes</button>
         </form>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        
+        const userData = JSON.parse(localStorage.getItem('user_data'));
+
+        const petIdToEdit = "pet2"; // HACER QUE CUANDO HA SIDO SELECCIONADA TOME SU ID DIRECTAMENTE
+
+        const userPets = petsData.pets.filter(pet => pet.idOwner === userData.name);
+
+        const petToEdit = userPets.find(pet => pet.id === petIdToEdit);
+
+        const nameInput = document.getElementById('lname');
+        const weightInput = document.getElementById('lweight');
+        const typeInput = document.getElementById('ltypepet');
+        const breedInput = document.getElementById('lbreed');
+
+        nameInput.value = petToEdit.name;
+        weightInput.value = petToEdit.weight;
+        typeInput.value = petToEdit.typeOfPet;
+        breedInput.value = petToEdit.breed;
+    });
+    </script>
 
     <!-- Dynamic load of the footer --> 
     <script>loadComponents("../html/components/footer.html", "footer")</script>

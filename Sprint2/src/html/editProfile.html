@@ -9,7 +9,16 @@
 <body id="body-form">
     <!-- Dynamic load of the header -->
     <script src="../js/loadComponents.js"></script>
-    <script>loadComponents("../html/components/header.html", "header")</script>
+    <script src="../js/validateLogin.js"></script>
+    <script src="../js/logOut.js"></script>
+    <script>
+        const userData = JSON.parse(localStorage.getItem('user_data'));
+        if (userData) {
+            loadHeader(userData);
+        } else {
+            loadComponents("../html/components/header.html", "header");
+        }
+    </script>
     <header id="header"></header>
      
     <!-- Body page -->

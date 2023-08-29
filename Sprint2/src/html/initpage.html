@@ -17,13 +17,27 @@
     <link rel="stylesheet" href="../css/initPage.css" media="all">
     <link rel="stylesheet" type="text/css" href="../css/components/header.css">
     <link rel="stylesheet" type="text/css" href="../css/components/footer.css">
+    <script src="../js/loadComponents.js"></script>
+    
+
 </head>
 <body id="body-form">
-   
-    <!-- Dynamic load of the header -->
-    <script src="../js/loadComponents.js"></script>
-    <script>loadComponents("../html/components/header.html", "header")</script>
     <header id="header"></header>
+    <script src="../js/validateLogin.js"></script>
+    <script src="../js/logOut.js"></script>
+    <script>
+        // Obtener los datos del usuario del localStorage
+        const userData = JSON.parse(localStorage.getItem('user_data'));
+    
+        // Verificar si hay datos de usuario en el localStorage
+        if (userData) {
+            // Cargar el header correspondiente según el tipo de usuario
+            loadHeader(userData);
+        } else {
+            // Si no hay datos de usuario, cargar el header normal
+            loadComponents("../html/components/header.html", "header");
+        }
+    </script>
 
     <!-- Body page -->
     <div class="container">

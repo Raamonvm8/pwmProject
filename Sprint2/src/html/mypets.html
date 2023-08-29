@@ -14,38 +14,28 @@
 <body id="body-form">
     <!-- Dynamic load of the header -->
     <script src="../js/loadComponents.js"></script>
-    <script>loadComponents("../html/components/header.html", "header")</script>
+    <script src="../js/logOut.js"></script>
+    <script src="../js/loadPets.js"></script>
     <header id="header"></header>
+    <script src="../js/validateLogin.js"></script>
+    <script>
+        // Obtener los datos del usuario del localStorage
+        const userData = JSON.parse(localStorage.getItem('user_data'));
+    
+        // Verificar si hay datos de usuario en el localStorage
+        if (userData) {
+            // Cargar el header correspondiente según el tipo de usuario
+            loadHeader(userData);
+        } else {
+            // Si no hay datos de usuario, cargar el header normal
+            loadComponents("../html/components/header.html", "header");
+        }
+    </script>
 
     <!-- Body page -->
     <div class="container ini-page">
         <h1 class="page-title">My Pets</h1>
-        <div class="row row-cols-1 row-cols-md-4 g-4 rectangle-pets">
-            <div class="col">
-                <div class="photos-pet">
-                    <a href="editPet.html"><img src="../assets/images/mypets/perro1.png" alt="foto-animal" class="rounded-circle"></a>
-                    <h2 class="animal-name">Coco</h2>
-                </div>
-            </div>
-            <div class="col">
-                <div class="photos-pet">
-                    <a href="editPet.html"><img src="../assets/images/mypets/gato1.png" alt="foto-animal" class="rounded-circle"></a>
-                    <h2 class="animal-name">Lala</h2>
-                </div>
-            </div>
-            <div class="col">
-                <div class="photos-pet">
-                    <a href="editPet.html"><img src="../assets/images/mypets/perro2.png" alt="foto-animal" class="rounded-circle"></a>
-                    <h2 class="animal-name">Mister</h2>
-                </div>
-            </div>
-            <div class="col">
-                <div class="photos-pet">
-                    <a href="editPet.html"><img src="../assets/images/mypets/gato2.png" alt="foto-animal" class="rounded-circle"></a>
-                    <h2 class="animal-name">Tina</h2>
-                </div>
-            </div>
-        </div>
+        <div class="row row-cols-1 row-cols-md-4 g-4 rectangle-pets" id="pets-container"></div>
         <button class="button-form" onclick="location.href='addPet.html'">Add a Pet</button>
     </div>
 

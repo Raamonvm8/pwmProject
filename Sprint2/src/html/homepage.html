@@ -12,7 +12,16 @@
 <body id="body-homepage">       
     <!-- Dynamic load of the header -->
     <script src="../js/loadComponents.js"></script>
-    <script>loadComponents("../html/components/header.html", "header")</script>
+    <script src="../js/validateLogin.js"></script>
+    <script src="../js/logOut.js"></script>
+    <script>
+        const userData = JSON.parse(localStorage.getItem('user_data'));
+        if (userData) {
+            loadHeader(userData);
+        } else {
+            loadComponents("../html/components/header.html", "header");
+        }
+    </script>
     <header id="header"></header>
 
     <!-- Body page -->
@@ -36,7 +45,7 @@
                         <img src="../assets/images/homepage/catAndDogSleeping.jpg" class="d-block square" alt="cat and dog sleeping" style="width: 120%;">
                         <div class="carousel-caption-overlay">
                             <h5 class="header-image-container" style="color: #61f5eb;">Quality Pet Care</h5>
-                            <p style="text-align: left;">Providing a peaceful and comfortable environment for your pets to relax and enjoy their stay.</p>
+                            <!--<p style="text-align: left;">Providing a peaceful and comfortable environment for your pets to relax and enjoy their stay.</p> -->
                         </div>
                     </div>
                     <div class="carousel-item">
