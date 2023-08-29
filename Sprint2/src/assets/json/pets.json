@@ -1,21 +1,21 @@
 {
   "pets": [
     {
-      "id": "pet1",
-      "idOwner": "owner1",
-      "name": "Buddy",
-      "weight": "12",
-      "photo": "buddy.jpg",
+      "id": "Pet1",
+      "idOwner": "Ramón",
+      "name": "Mister",
+      "weight": "6",
+      "photo": "../assets/images/mypets/foto_perro_Ramon.png",
       "typeOfPet": "Dog",
-      "breed": "Labrador"
+      "breed": "Yorkshire"
     },
     {
       "id": "pet2",
-      "idOwner": "owner2",
-      "name": "Whiskers",
-      "weight": "5",
-      "photo": "whiskers.jpg",
-      "typeOfPet": "Cat",
+      "idOwner": "Marta",
+      "name": "Coco",
+      "weight": "10",
+      "photo": "../assets/images/mypets/foto_perro_Marta.jpg",
+      "typeOfPet": "Dog",
       "breed": "Siamese"
     },
     {
