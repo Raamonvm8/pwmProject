@@ -46,8 +46,8 @@
                 <label class ="field-form" for="lbreed">Breed:</label><br>
                 <input class="input-form" type="text" id="lbreed" name="lbreed"><br>
             </div>
-            <button class="button-form login-button" id="cancel-button" onclick="location.href='mypets.html'">Cancel</button>
-            <button type="submit" form="form-animal" class="button-form login-button" id="save-button" value="Submit" onclick="location.href='mypets.html'">Save changes</button>
+            <button class="button-form login-button" id="cancel-button" formaction="mypets.html">Cancel</button>
+            <button type="submit" form="form-animal" class="button-form login-button" id="save-button" value="Submit" formaction="mypets.html">Save changes</button>
         </form>
     </div>
     
@@ -91,5 +91,7 @@
         breedInput.value = petToEdit.breed;
     });
     </script>
+    <script src="../js/hamburguer.js"></script>
+
 </body>
 </html>
