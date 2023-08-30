@@ -118,6 +118,9 @@ body {
 .carousel-caption-overlay:hover {
     opacity: 1; /* Mostrar la capa oscura y el texto cuando se coloque el ratón sobre la imagen */
 }
+h2 {
+    font-size: 1.5rem; 
+ }
 
 .carousel-caption-overlay, .carousel-caption-overlay p {
     color: white;
@@ -161,37 +164,77 @@ body {
         background-color: #09C184;
     }
     .app-name {
-        width: 167%;
-        font-size: 7vw;
-        height: 10vh;
-        border-radius: 0px;
-        border: none;
-        margin-left: 0px;
-        margin-bottom: 0rem;
-        margin-top: 0rem;
+        margin-top: 20px;
+        margin-left: 80px;
+        width: 100%;
+        font-size: 5vw;
+    }
+    h2 {
+       font-size: 0.5rem; 
     }
     .description-with-text{
-        border-radius: 0px;
-        border: none;
-        margin-bottom: 30px;
-        margin-left: 0px;
-    }
-    .square {
-        border-radius: 5px;
-        margin-left: 120px;
-        margin-bottom: 2rem;
-    }
-    #description-text{
-        font-size: 20px;
+        width: 140%;
+        
     }
     .white-rectangle {
-        font-size: calc(0.6rem + 0.7vw);
-        width: 30vw;
-        height: calc(20rem + 20vh);
-        background-color: white;
-        margin-right: 40px;
-        margin-left: 40px;
-        margin-bottom: 10px;
-        text-align: left;
+        font-size: calc(0.8rem + 0.7vw);
+        width: 75vw;
+        
     }
+    .carousel-caption-overlay {
+        bottom: 0;
+        position: absolute;
+        margin-left: 3.8rem;
+        width: auto;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        transition: opacity 0.3s;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        opacity: 0; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel-caption-overlay:hover {
+        opacity: 1; /* Mostrar la capa oscura y el texto cuando se coloque el ratón sobre la imagen */
+    }
+    h2 {
+        font-size: 1.5rem; 
+     }
+    
+    .carousel-caption-overlay, .carousel-caption-overlay p {
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .carousel-control-prev, .carousel-control-next {
+        width: auto;
+        height: 20%;
+        margin: 4rem;
+        top: 15%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5); 
+        border: none;
+        z-index: 3;
+    }
+    
+    .carousel-control-prev {
+        left: 0;
+        padding: 0.5rem;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+    .carousel-control-next {
+        right: 0;
+        margin-right: 0.3rem;
+        padding: 0.5rem;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+   
+    
 }

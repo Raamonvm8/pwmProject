@@ -87,7 +87,7 @@ body {
     .left-section,
     .right-section {
         width: 100%;
-        height: calc(15rem + 10vh);
+        height: auto;
         border: 1px solid black;
         flex-direction: column;
         align-items: center;
@@ -98,7 +98,7 @@ body {
     }
     .white-box {
         width: 85%;
-        height: calc(4rem + 2vw);
+        height: auto;
         font-size: calc(0.7rem + 0.2vw);
         margin-top: 1rem; 
     }
