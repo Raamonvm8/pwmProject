@@ -49,6 +49,22 @@
             <button type="submit" form="form-animal" id="log" class="button-form login-button" value="Submit" onclick="location.href='profile.html'">Save changes</button>
         </form>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        
+            const userData = JSON.parse(localStorage.getItem('user_data'));
+
+            const nameInput = document.getElementById('lname');
+            const lastNametInput = document.getElementById('lapellido');
+            const emailInput = document.getElementById('lcorreo');
+            const passwordInput = document.getElementById('llpass');
+
+            nameInput.value = userData.name;
+            lastNametInput.value = userData.surname;
+            emailInput.value = userData.email;
+            passwordInput.value = "********";
+    });
+    </script>
     <!-- Dynamic load of the footer --> 
     <script>loadComponents("../html/components/footer.html", "footer")</script>
     <footer id="footer" style="margin-top: auto;"></footer>
