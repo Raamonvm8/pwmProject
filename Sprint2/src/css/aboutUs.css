@@ -1,16 +1,15 @@
-body {
+#body-form {
     margin: 0;
     padding: 0;
-}
-
-#body-form {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
+.parragraph-about-us{
+    font-size: calc(1rem + 0.5vw);
+}
 .section-info, .section-about {
     width: 100%;
     background-color: #15D696;
@@ -50,46 +49,26 @@ body {
     font-weight: bold;
     border-radius: 5px;
 }
+.hidden-mobile {
+    display: block
+}
+
+#aboutUs-title{
+    font-size: calc(2rem + 1vw);
+}
 
 /*Tablet*/
 @media only screen and (max-width: 1200px) {}
 
 /*Movil*/
 @media only screen and (max-width: 750px) {
-    .container {
-        background-color: #09C184;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    #aboutUs-title{
+        text-align: center;
     }
-    .rectangle1 {
-        width: 89%;
-        background-color: #15D696;
-        border-radius: 0px;
-        border: none;
-        margin-bottom: 0px;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    .hidden-mobile {
+        display: none;
     }
-    .rectangle2 {
-        width: 88%;
-        height: 410px;
-        background-color: #09C184;
-        border-radius: 0px;
-        border: none;
-        margin-bottom: 20px;
-        padding: 20px;
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
-    }
-    .inner-rectangle {
-        width: 90%;
-        height: 340px;
-        margin-left: 10px;
-        margin-top: 30px;
-        background-color: #ffffff;
-        border: 1px solid #bfbfbf;
-        border-radius: 5px;
-        display: flex;
-        
+    .section{
+        min-width: 20rem;
     }
 }

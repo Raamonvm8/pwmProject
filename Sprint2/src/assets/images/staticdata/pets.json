@@ -1,33 +1,31 @@
 {
     "users": [
         {
-        "email": "ramon@gmail.com",
-        "Pets": {
-            "Tipo de animal": "Perro",
-            "Nombre animal": "Coco",
-            "Género": "M",
-            "Raza": "chiguagua",
-            "Peso": "4kg"    
+            "userId": 2,
+            "email": "ramon@gmail.com",
+            "Pets": {
+                "id": "1",
+                "Tipo de animal": "Perro",
+                "Nombre animal": "Coco",
+                "Género": "M",
+                "Raza": "chiguagua",
+                "Peso": "4kg"    
         },
-        "Aditionals": {
-            "Tipo de comida": "petisuit"
-
+            "Aditionals": {
+                "Tipo de comida": "petisuit"
         }
-            
         },
         {
-        "id": 2,
-        "Nombre": "Pepe",
-        "email": "pepe@gmail.com",
-        "password": "12345678",
-        "administrador": false
+            "userId": 2,
+            "email": "pepe@gmail.com",
+            "Pets": {},
+            "Aditionals": {}
         },
         {
-        "id": 3,
-        "Nombre": "Jorge",
-        "email": "jorge@gmail.com",
-        "password": "12345678",
-        "administrador": false
+            "userId": 3,
+            "email": "jorge@gmail.com",
+            "Pets": {},
+            "Aditionals": {}
         }
     ]
 }
