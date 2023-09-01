@@ -71,7 +71,7 @@
     grid-column: 5 / 5;
 }
 
-/*Tablet y movil*/
+/*Tablet and phones*/
 @media only screen and (max-width: 1200px),
        only screen and (max-width: 750px) {
     .footer-section {
