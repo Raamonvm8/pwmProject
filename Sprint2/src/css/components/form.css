@@ -91,23 +91,28 @@
 
 /* Tablet and Phones */
 @media only screen and (max-width: 1200px), only screen and (max-width: 750px) {
-    .form-register-position {
+    .form-login-position, .form-register-position, .form-animal-position {
         display: flex;
         justify-content: center;
         align-items: center;
         height: auto;
+        margin: 0;
+        padding: 1rem; 
     }
 
-    .form-register {
-        width: 90%;
-        margin: 1rem;
+    .form-login, .form-register, .form-animal {
+        width: 100%; 
+        max-width: 90%; 
+        margin: 0;
     }
 
     #log, #save-button, #cancel-button {
         width: 100%;
+        margin-bottom: 1rem; 
     }
 
     .input-form {
         width: 100%;
+        max-width: 100%; 
     }
 }

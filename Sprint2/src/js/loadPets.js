@@ -11,7 +11,7 @@
         },
         {
             "id": "pet2",
-            "idOwner": "Marta",
+            "idOwner": "Ramón",
             "name": "Coco",
             "weight": "10",
             "photo": "../assets/images/mypets/foto_perro_Marta.jpg",
@@ -20,10 +20,28 @@
         },
         {
             "id": "pet3",
-            "idOwner": "owner3",
+            "idOwner": "Ramón",
             "name": "Nemo",
             "weight": "0.5",
-            "photo": "nemo.jpg",
+            "photo": "../assets/images/mypets/foto_perro_Ramon.png",
+            "typeOfPet": "Fish",
+            "breed": "Clownfish"
+        },
+        {
+            "id": "pet3",
+            "idOwner": "Ramón",
+            "name": "Nemo",
+            "weight": "0.5",
+            "photo": "../assets/images/mypets/foto_perro_Marta.jpg",
+            "typeOfPet": "Fish",
+            "breed": "Clownfish"
+        },
+        {
+            "id": "pet3",
+            "idOwner": "Ramón",
+            "name": "Nemo",
+            "weight": "0.5",
+            "photo": "../assets/images/mypets/foto_perro_Ramon.png",
             "typeOfPet": "Fish",
             "breed": "Clownfish"
         }
