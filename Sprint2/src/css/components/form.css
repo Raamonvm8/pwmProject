@@ -39,7 +39,7 @@
     border-radius: 10px;
     box-shadow: 40px 20px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #eeeeee;
+    background-color: #f5f5f5;
 }
 
 #title-form {
@@ -89,29 +89,25 @@
     color: #0077aa;
 }
 
-
-/*Tablet and phones*/
+/* Tablet and Phones */
 @media only screen and (max-width: 1200px), only screen and (max-width: 750px) {
-    .form-animal-position, .form-login-position, .form-register-position {
+    .form-register-position {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 70vh;
-        margin-left: 0rem;
+        height: auto;
     }
 
-    .form-animal {
-        width: 70%;
+    .form-register {
+        width: 90%;
         margin: 1rem;
     }
 
     #log, #save-button, #cancel-button {
         width: 100%;
-        padding: 10px;
-        border-radius: 10px;
-        color: #fff;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
+    }
+
+    .input-form {
+        width: 100%;
     }
 }
