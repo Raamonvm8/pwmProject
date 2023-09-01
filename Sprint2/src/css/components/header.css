@@ -10,6 +10,9 @@
     padding: 1rem 2rem;
     background-color: #07F9A2;
 }
+.display-phone-width{
+    display: none;
+}
 
 #body-form{
     margin-top: 10rem;
@@ -138,3 +141,28 @@
 #users-logged-position-button{
     margin-bottom: 2rem;
 }
+
+.display-high-width{
+    display: flex;
+}    
+
+/*Tablet*/
+@media only screen and (max-width: 1200px) {
+    .display-phone-width{
+        display: none;
+    }
+    .display-high-width{
+        display: flex;
+    }    
+}
+
+/*Movil*/
+@media only screen and (max-width: 750px) {
+    .display-phone-width{
+        display: flex;
+    }
+    .display-high-width{
+        display: none;
+    }
+}
+
