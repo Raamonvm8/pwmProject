@@ -9,13 +9,10 @@
 }
 
 .section-title {
-    margin-bottom: 30px;
-}
-
-.section-title {
     font-size: 28px;
     text-align: center;
     color: #15D696;
+    margin-bottom: 30px;
 }
 
 .error-box {
@@ -71,3 +68,9 @@
     background-color: #14B286;
     color: white;
 }
+
+/* Tablet */
+@media only screen and (max-width: 1200px) {}
+
+/* Phones */
+@media only screen and (max-width: 750px) {}
