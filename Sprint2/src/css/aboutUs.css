@@ -1,6 +1,7 @@
 .parragraph-about-us{
     font-size: calc(1rem + 0.5vw);
 }
+
 .section-info, .section-about {
     width: 100%;
     background-color: #15D696;
@@ -40,6 +41,7 @@
     font-weight: bold;
     border-radius: 5px;
 }
+
 .hidden-mobile {
     display: block
 }
@@ -48,18 +50,19 @@
     font-size: calc(2rem + 1vw);
 }
 
-/*Tablet*/
-@media only screen and (max-width: 1200px) {}
+/* Tablet and phones */
+@media only screen and (max-width: 1200px),
+       only screen and (max-width: 750px) {
+    .section-about, .section-info {
+        padding: 20px;
+    }
 
-/*Movil*/
-@media only screen and (max-width: 750px) {
-    #aboutUs-title{
+    #aboutUs-title {
         text-align: center;
+        font-size: 2rem
     }
-    .hidden-mobile {
-        display: none;
-    }
-    .section{
-        min-width: 20rem;
+
+    .inner-rectangle {
+        font-size: 16px;
     }
 }
