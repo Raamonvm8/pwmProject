@@ -7,9 +7,7 @@
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 80%;
-    margin: 20px auto;
     padding: 10px;
     background-color: white;
     border-radius: 10px;
@@ -27,7 +25,7 @@
 .section-title {
     font-size: 24px;
     color: #333;
-    margin-bottom: 20px;
+    margin: 20px 0; 
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -47,9 +45,8 @@
 
 #table-administration {
     width: 80%;
-    margin-bottom: 4rem;
+    margin: 20px auto;
     border-collapse: collapse;
-    margin-top: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
     border-radius: 10px;
@@ -86,14 +83,8 @@ tr:hover {
     transition: background-color 0.3s;
 }
 
-/*Tablet*/
+/* Tablet */
 @media only screen and (max-width: 1200px) {}
 
-/*Movil*/
-@media only screen and (max-width: 750px) {
-    .table-page{
-        justify-content: center;
-        text-align: -webkit-center;
-        background-color: #09C184;
-    }
-}
+/* Phones */
+@media only screen and (max-width: 750px) {}
