@@ -64,15 +64,27 @@
     margin-top: 0;
 }
 
-/*Tablet*/
-@media only screen and (max-width: 1200px) {}
+/* Tablet */
+@media only screen and (max-width: 1200px) {
+    .page {
+        padding: 1rem;
+    }
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+    .title-section-history {
+        font-size: 1.5rem;
+    }
+}
 
-/*Movil*/
+/* Phones */
 @media only screen and (max-width: 750px) {
     .page {
         display: grid;
         justify-content: center;
         align-items: center;
+        padding: 1rem;
         margin-bottom: 2rem;
     }
     .left-section,
@@ -90,7 +102,7 @@
     .white-box {
         width: 85%;
         height: auto;
-        font-size: calc(0.7rem + 0.2vw);
+        font-size: calc(1rem + 0.2vw);
         margin-top: 1rem; 
     }
 }
