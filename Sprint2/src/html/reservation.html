@@ -5,29 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "icon" type = "image/ico" href = "../logo.ico">
     <title>Reservation</title>
+    
+    <!-- Applying styles --> 
+    <link rel="stylesheet" type="text/css" href="../css/components/header.css" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" type="text/css" href="../css/components/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/reservation.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <!-- Confirm User -->
+    <script src="../js/validateLogin.js"></script>
+    <script src="../js/logOut.js"></script>
+
+    <!-- Bootstrap dependencies --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- Font awesome dependencies -->
+    <script src="https://kit.fontawesome.com/9cdb4512b3.js" crossorigin="anonymous"></script>
 </head>
 <body id="body-form">
     <!-- Dynamic load of the header -->
     <script src="../js/loadComponents.js"></script>
-    <script src="../js/logOut.js"></script>
-    <script src="../js/hamburguer.js"></script>
     <header id="header"></header>
-    <script src="../js/validateLogin.js"></script>
-    <script>
-        const userData = JSON.parse(localStorage.getItem('user_data'));
-        if (userData) {
-            loadHeader(userData);
-        } else {
-            loadComponents("../html/components/header.html", "header");
-        }
-    </script>
 
     <!-- Body page -->
     <form class="form-reservation" id="form-reservation">
         <div class="all-page">
             <div class="sections-container">
                 <div class="left-section">
-                    <h2 class="title-reservation">Reservation Form</h2>
+                    <h2 class="title-reservation">Reservation</h2>
                     <div id="fields-inputs">
                         <label class="field-input-reservation">Pet 1</label>
                         <select class="input-perfil" id="selector-pet-first" name="pet1">
@@ -35,7 +42,6 @@
                             <option value="pet_id_1">Buddy</option>
                             <option value="pet_id_2">Whiskers</option>
                             <option value="pet_id_3">Nemo</option>
-                            <!-- Add more pet options if needed -->
                         </select><br>
                         
                         <label class="field-input-reservation">Pet 2</label>
@@ -44,7 +50,6 @@
                             <option value="pet_id_1">Buddy</option>
                             <option value="pet_id_2">Whiskers</option>
                             <option value="pet_id_3">Nemo</option>
-                            <!-- Add more pet options if needed -->
                         </select><br>
                         
                         <label class="field-input-reservation">Pet 3</label>
@@ -53,7 +58,6 @@
                             <option value="pet_id_1">Buddy</option>
                             <option value="pet_id_2">Whiskers</option>
                             <option value="pet_id_3">Nemo</option>
-                            <!-- Add more pet options if needed -->
                         </select><br>
                         
                         <label class="field-input-reservation">Daycare</label>
@@ -65,7 +69,6 @@
                             <option value="service_id_1">Grooming</option>
                             <option value="service_id_2">Playroom Access</option>
                             <option value="service_id_3">Feeding Service</option>
-                            <!-- Add more service options if needed -->
                         </select><br>
                         
                         <label class="field-input-reservation">Addition 2</label>
@@ -74,7 +77,6 @@
                             <option value="service_id_1">Grooming</option>
                             <option value="service_id_2">Playroom Access</option>
                             <option value="service_id_3">Feeding Service</option>
-                            <!-- Add more service options if needed -->
                         </select><br>
                         
                         <label class="field-input-reservation">Addition 3</label>
@@ -83,7 +85,6 @@
                             <option value="service_id_1">Grooming</option>
                             <option value="service_id_2">Playroom Access</option>
                             <option value="service_id_3">Feeding Service</option>
-                            <!-- Add more service options if needed -->
                         </select><br>
                     </div>
                 </div>
@@ -115,22 +116,8 @@
             </div>
         </div>   
     </form>
-
     <!-- Dynamic load of the footer -->
     <script>loadComponents("../html/components/footer.html", "footer")</script>
     <footer id="footer" style="margin-top: auto;"></footer>
-
-    <!-- Applying styles here for optimization --> 
-    <link rel="stylesheet" type="text/css" href="../css/components/header.css" media="none" onload="if(media!='all')media='all'">
-    <link rel="stylesheet" type="text/css" href="../css/components/footer.css">
-    <link rel="stylesheet" type="text/css" href="../css/reservation.css">
-
-    <!-- Bootstrap dependencies --->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
-    <!-- Font awesome dependencies -->
-    <script src="https://kit.fontawesome.com/9cdb4512b3.js" crossorigin="anonymous"></script>
     </body>
 </html>
