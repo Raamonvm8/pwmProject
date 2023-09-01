@@ -133,7 +133,6 @@
     object-fit: cover;
 }
 
-/* Estilos para los botones */
 .action-button {
     margin: 0 10px;
 }
@@ -170,7 +169,6 @@
     margin-left: 5px;
 }
 
-/* Estilos para los botones de mascotas y reservas */
 .pet-reservation-buttons {
     display: flex;
     align-items: center;
@@ -209,39 +207,41 @@
     margin: 1rem auto;
 }
 
-/*Tablet*/
+/* Tablet */
 @media only screen and (max-width: 1200px) {
     .profile-page {
         background-color: #ffffff;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
+        align-items: center; 
         text-align: -webkit-center;
         margin-bottom: 2rem;
     }
     .action-menu {
-        width: 35%;
-        height: 530px;
-        flex-direction: column;
-        margin: 2rem;
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
         padding: 2rem;
+        border-radius: 15px;
         text-align: center;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     }
     .action-buttons {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        margin-top: 3rem;
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 2rem;
     }
-
+    .action-buttons .transparent-button {
+        width: auto; 
+        margin: 0.5rem 0;
+    }
 }
 
-/*Movil*/
+/*  Phones */
 @media only screen and (max-width: 750px) {
     .profile-page {
-        background-color: #09C184;
         display: grid;
         flex-direction: row;
         justify-content: center;
@@ -272,13 +272,8 @@
         max-width: 800px;
         margin: 2rem auto 0;
         padding: 2rem;
-        background-color: #005035;
         border-radius: 15px;
         text-align: center;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     }
-    
-    
-   
-
 }
