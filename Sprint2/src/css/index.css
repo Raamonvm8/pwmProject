@@ -154,6 +154,7 @@
     .managemnet-carousel {
         display: none;
     }
+
     .name-with-description, .app-name{
         width: 90%;
     }
@@ -187,6 +188,7 @@
         margin-right: auto;
         max-width: 90%;
     }
+
     #description-text {
         font-size: 1.5rem;
         text-align: center;
