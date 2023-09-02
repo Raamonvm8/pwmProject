@@ -56,7 +56,9 @@
     .section-about, .section-info {
         padding: 20px;
     }
-
+    .hidden-mobile{
+        display: none;
+    }
     #aboutUs-title {
         text-align: center;
         font-size: 2rem
