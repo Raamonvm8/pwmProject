@@ -8,22 +8,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const reservations = document.getElementById('reservations');
     const profilePhoto = document.getElementById('foto-perfil-profile');
 
-    // Obtener los datos del usuario del almacenamiento local
-    const userData = JSON.parse(localStorage.getItem('user_data'));
+    try {
+        const userData = JSON.parse(localStorage.getItem('user_data'));
 
-    if (userData) {
-        // Campos perfil
-        nameInput.value = userData.name;
-        lastNameInput.value = userData.surname;
-        emailInput.value = userData.email;
-        passwordInput.value = "********"; 
+        if (userData) {
+            nameInput.value = userData.name;
+            lastNameInput.value = userData.surname;
+            emailInput.value = userData.email;
+            passwordInput.value = "********"; 
 
-        // Campos izquierda
-        pets.textContent = userData.pets;
-        reservations.textContent = userData.reservations;
+            pets.textContent = userData.pets;
+            reservations.textContent = userData.reservations;
 
-        if (userData.photo) {
-            profilePhoto.src = userData.photo;
+            if (userData.photo) {
+                profilePhoto.src = userData.photo;
+            }
+        } else {
+            // Error user not exist
+            window.location.href = "error.html";
         }
+    } catch (error) {
+        // Handle Local storage parsing error
+        console.error("Error parsing user data:", error);
+        window.location.href = "error.html";
     }
 });

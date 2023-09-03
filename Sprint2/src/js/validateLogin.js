@@ -1,17 +1,9 @@
-function loadHeader(user) {
-    if (user.admin) {
-        loadComponents("../html/components/headerAdminUser.html", "header");
-    } else {
-        loadComponents("../html/components/headerLoggedUser.html", "header");
-    }
-}
+const loadHeader = (user) => {
+    loadComponents(user.admin ? "../html/components/headerAdminUser.html" : "../html/components/headerLoggedUser.html", "header");
+};
 
 document.addEventListener('DOMContentLoaded', function() {
     const userData = JSON.parse(localStorage.getItem('user_data'));
-    if (userData) {
-        loadHeader(userData);
-    } else {
-        loadComponents("../html/components/header.html", "header");
-    }
+    userData ? loadHeader(userData) : loadComponents("../html/components/header.html", "header");
 });
 
