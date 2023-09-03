@@ -1,30 +1,20 @@
-function loadHeader(user) {
-    if (user.admin) {
-        loadComponents("../html/components/headerAdminUser.html", "header");
-    } else {
-        loadComponents("../html/components/headerLoggedUser.html", "header");
-    }
-}
-
-
 function loginUser() {
-    // Obtener el valor del campo de correo electrónico y contraseña
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     
-
-    // Cargar el archivo JSON de usuarios
+    // Loading JSON user data
     fetch("../assets/json/users.json")
         .then(response => response.json())
         .then(data => {
             const user = data.users.find(user => user.email === email);
-            // Verificar si el correo electrónico existe en el archivo JSON
+            // Verify if user exist
             if (!user) {
                 alert("Usuario no encontrado");                
             } else if (user.password != password){
                 alert("Contraseña Incorrecta, pruebe de nuevo");
             }else{
                 const userData = {
+                    id: user.id,
                     name: user.name,
                     surname: user.surname,
                     email: user.email,
@@ -35,12 +25,11 @@ function loginUser() {
                     admin: user.admin,
                 };
                 localStorage.setItem('user_data', JSON.stringify(userData));
-                loadHeader(user); // Cargar el header adecuado
+                loadHeader(user);
                 window.location.href = "initpage.html";
             }
         })
         .catch(error => {
-            console.error("Error al cargar el archivo JSON:", error);
+            console.error("Error in loading JSON:", error);
         });
 }
-
