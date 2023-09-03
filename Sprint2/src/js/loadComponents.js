@@ -1,5 +1,4 @@
 function loadComponents(fileName, id, callback) {
-
     fetch(fileName).then((res) => {
         return res.text();
     }).then((text) => {
