@@ -128,7 +128,23 @@
     .display-phone-width{
         display: flex;
     }
+
     .display-high-width{
         display: none;
+    }
+
+    #logo-icon-header{
+        margin-left: 0.5rem;
+    }
+
+    .register-button, .login-button{
+        margin-right: 5px;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    #users-logged-position-button{
+        text-align: center;
     }
 }
