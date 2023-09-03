@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 paragraphElement.textContent = paragraph;
                 // In the movile view only see 2 paragraphs
                 if (index >= 2) {
-                    console.log("aaa")
                     paragraphElement.classList.add('hidden-mobile');
                 }
                 paragraphElement.classList.add('parragraph-about-us');
