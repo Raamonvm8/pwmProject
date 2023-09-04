@@ -5,7 +5,7 @@ import { addSearchInputListener } from '../loadUsersTable/handleUserAction/addSe
 import { addEditButtonListener } from '../loadUsersTable/handleUserAction/addEditButtonListener.js';
 
 export function initializeUserManagement(users) {
-    console.log("aa")
+    // The listeners of the table as RUD
     addDeleteButtonListener();
     addEditButtonListener(users);
     addConfirmDeleteButtonListener();
