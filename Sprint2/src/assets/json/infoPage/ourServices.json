@@ -1,19 +1,19 @@
 {
     "services": [
       {
-        "name": "Web Design",
-        "icon": "fas fa-desktop",
-        "description": "Create visually appealing and user-friendly websites that leave a lasting impression on your audience."
+        "name": "Pet Care",
+        "icon": "fas fa-paw",
+        "description": "We provide expert care for your pets, ensuring their health, happiness, and comfort."
       },
       {
-        "name": "Digital Marketing",
-        "icon": "fas fa-chart-line",
-        "description": "Boost your online presence with data-driven strategies, social media campaigns, and targeted advertising."
+        "name": "Nutrition Plans",
+        "icon": "fas fa-bone",
+        "description": "Tailored nutrition plans to meet the unique dietary needs of each pet."
       },
       {
-        "name": "Mobile App Development",
-        "icon": "fas fa-mobile-alt",
-        "description": "Design and build intuitive mobile applications that provide seamless experiences on various platforms."
+        "name": "Cozy Accommodation",
+        "icon": "fas fa-bed",
+        "description": "Comfortable and safe accommodations designed to make your pets feel at home."
       }
     ]
   }
