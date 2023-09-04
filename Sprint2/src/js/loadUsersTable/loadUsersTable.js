@@ -1,6 +1,13 @@
+import { loadUsersTable } from './userTable.js';
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Verify if user is admin and user exist
-    var currentUserEmail;
+    loadUsersTable();
+});
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    
+     var currentUserEmail;
     try {
         const currentUserJson = localStorage.getItem('user_data');
         const currentUser = JSON.parse(currentUserJson);
@@ -156,26 +163,43 @@ document.addEventListener('DOMContentLoaded', function() {
             cancelButton.addEventListener('click', closeModal);
 
             const searchInput = document.getElementById('search-input');
-            // To Search the user by email
-            searchInput.addEventListener('input', function() {
-                const searchText = searchInput.value.toLowerCase(); 
+searchInput.addEventListener('input', function() {
+    const searchText = searchInput.value.toLowerCase();
 
-                const rows = document.querySelectorAll('#table-administration tbody tr');
-                // Modify front table
-                rows.forEach(row => {
-                    const nameCell = row.querySelector('td:nth-child(2)'); 
-                    const emailCell = row.querySelector('td:nth-child(4)');
-                    if (nameCell && emailCell) {
-                        const name = nameCell.textContent.toLowerCase(); 
-                        const email = emailCell.textContent.toLowerCase(); 
-                        if (name.includes(searchText) || email.includes(searchText)) {
-                            row.style.display = ''; 
-                        } else {
-                            row.style.display = 'none';
-                        }
-                    }
-                });
-            });
+    // Filas de la tabla de escritorio
+    const rowsDesktop = document.querySelectorAll('#table-administration tbody tr');
+
+    // Filas de la tabla móvil
+    const rowsMobile = document.querySelectorAll('#table-administration-mobile tbody tr');
+
+    // Modificar visibilidad para ambas tablas
+    rowsDesktop.forEach(row => {
+        const nameCell = row.querySelector('td:nth-child(2)');
+        const emailCell = row.querySelector('td:nth-child(4)');
+        if (nameCell && emailCell) {
+            const name = nameCell.textContent.toLowerCase();
+            const email = emailCell.textContent.toLowerCase();
+            if (name.includes(searchText) || email.includes(searchText)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    });
+
+    rowsMobile.forEach(row => {
+        const emailCell = row.querySelector('td:nth-child(1)');
+        if (emailCell) {
+            const email = emailCell.textContent.toLowerCase();
+            if (email.includes(searchText)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    });
+});
+
         })
         .catch(error => {
             // Exception  JSON
@@ -183,3 +207,4 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '../html/error.html';
         });
 });
+    */
