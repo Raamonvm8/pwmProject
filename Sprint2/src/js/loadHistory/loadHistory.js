@@ -1,10 +1,14 @@
-// main.js
 import { fetchReservationsData, filterReservations } from './dataService.js';
-import { getCurrentUser } from './userService.js';
 import { fillReservationSection } from './reservationSection.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
     try {
+        // Verify if user is logged
+        const userData = localStorage.getItem('user_data');
+        if (!userData) {
+            window.location.href = '../html/permissionDenied.html';
+        }
+
         const reservationsData = await fetchReservationsData();
         const currentDate = new Date();
 
