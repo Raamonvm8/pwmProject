@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('../assets/images/staticdata/aboutUsParagraph.json')
+    fetch('../assets/json/infoPage/aboutUs.json')
         .then(response => response.json())
         .then(data => {
             const aboutUsContent = document.getElementById('aboutUs-content');
