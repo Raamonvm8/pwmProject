@@ -13,6 +13,7 @@
     <!-- Confirm User -->
     <script src="../js/validateLogin.js"></script>
     <script src="../js/logOut.js"></script>
+    <script src="../js/loadInitPage/loadInitPage.js"></script>
     <!-- Validate User Register-->
     <script src="../js/validateUserLogged.js"></script>
     <!-- Bootstrap dependencies -->
@@ -27,84 +28,64 @@
     <script src="../js/loadComponents.js"></script>
     <header id="header"></header>
     <!-- Body page -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
+        <!-- Lista de guarderías -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
                 <div class="image-container">
                     <img src="../assets/images/mapa_granCanaria.png" alt="Mapa Gran Canaria" class="image-rectangle"/>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="location-list">
-                    <h3 class="location-list-title">Featured Daycare Centers</h3>
-                    <ul>
-                        <li class="list-element"><span class="location-name">Pet Paradise</span> - San Juan</li>
-                        <li class="list-element"><span class="location-name">Furry Friends Haven</span> - Las Palmas</li>
-                        <li class="list-element"><span class="location-name">Pawfect Retreat</span> - Maspalomas</li>
-                        <li class="list-element"><span class="location-name">Whisker Wonderland</span> - Telde</li>
-                    </ul>
-                </div>
-            </div>
-            <span id="span-space"></span>
-            <div class="info-container">
-                <h2 class="info-title">Pet Paradise - San Juan</h2>
-                <div class="white-rectangle">
-                    <div class="text-information-services">
-                    <div id="position-information-daycare">
-                        <p>Welcome to Pet Paradise - San Juan! We specialize in providing top-notch care for your pets.</p>
-                        <p>Our services include:</p>
-                        <ul class="service-list">
-                            <li>Daily exercise and play sessions</li>
-                            <li>Premium grooming services</li>
-                            <li>Special dietary accommodations</li>
-                        </ul>
-                        <div class="text-information-services">
-                            <p>Our trained staff is dedicated to ensuring a safe, comfortable, and engaging environment for your furry friends.</p>
-                        </div>
                     </div>
                     </div>
-                </div>
-                <div class="reserve-button">
-                    <a href="reservation.html" class="button-reservation"><strong>Make a Reservation</strong></a>
-                </div>
-            </div>  
-        </div> 
-        <div class="row justify-content-center">
-            <div class="col-md-6 w-100">
-                <div class="reviews-container">
-                    <h2 class="reviews-title">Reviews</h2>
-                    <div class="review">
-                        <img src="../assets/images/chica_comentario.jpg" alt="User Photo" class="image-user"/>
-                        <h4 class="user-name">Laura</h4>
-                        <div class="comments-users">
-                            <p class="user-text">I can't believe how wonderful the daycare services are! My furry friend had the time of his life. Thank you for the amazing experience!</p>
-                        </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="location-list">
+                        <h3 class="location-list-title">Featured Daycare Centers</h3>
+                            <ul id="daycare-list">
+                                <!-- Aquí se generará dinámicamente la lista de guarderías -->
+                            </ul>
                     </div>
-                    <div class="review">
-                        <img src="../assets/images/chico_comentario.jpg" alt="User Photo" class="image-user"/>
-                        <h4 class="user-name">Bill</h4>
-                        <div class="comments-users">
-                            <p class="user-text">Absolutely fantastic! The care and attention my pet received were beyond my expectations. The team here truly understands pets' needs.</p>
-                        </div>
-                    </div>
-                    <div class="review-form">
-                        <h3 class="review-form-title">Leave a Review</h3>
-                        <form action="#" method="post">
-                            <div class="form-group">
-                                <label for="user-review">Your Review</label>
-                                <textarea id="user-review" name="user-review" rows="4" class="form-control" required></textarea>
-                            </div>
-                            <div id="button-review-position">
-                                <button type="submit" class="btn btn-primary submit-review-button">Submit Review</button>
-                            </div>
-                        </form>
-                    </div>
-                    
-                </div>
                 </div>
             </div>
         </div>
+    
+     <!-- Contenedor para mostrar la información de la guardería seleccionada -->
+    <div class="container info-container" id="daycare-info-container">
+    <!-- Aquí se mostrará dinámicamente la información de la guardería seleccionada -->
+    <div id="position-information-daycare">
+        <h2 id="daycare-name" class="fw-bold info-title"></h2>
+        <div class="align-content">
+            <p id="daycare-description"></p>
+            <ul id="daycare-services">
+            </ul>
+            <p id="daycare-price"></p>
+            <p id="daycare-other-info"></p>
+        </div>
+        <div class="reserve-button">
+            <a href="reservation.html" class="button-reservation"><strong>Make a Reservation</strong></a>
+        </div>
     </div>
+    </div>
+    <div class="container info-container">
+    <!-- Comentarios de la guardería seleccionada -->
+    <h2>Reviews</h2>
+    <div id="daycare-reviews">
+        <!-- Los comentarios se generarán dinámicamente aquí -->
+    </div>
+    <div class="review-form">
+        <h3 class="review-form-title">Leave a Review</h3>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="user-review">Your Review</label>
+                <textarea id="user-review" name="user-review" rows="4" class="form-control" required></textarea>
+            </div>
+            <div id="button-review-position">
+                <button type="submit" class="btn btn-primary submit-review-button">Submit Review</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
     <!-- Dynamic load of the footer -->  
     <script>loadComponents("../html/components/footer.html", "footer")</script>
     <footer id="footer" style="margin-top: auto;"></footer>

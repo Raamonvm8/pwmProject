@@ -9,11 +9,19 @@
 
 .container {
     padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.align-content{
+    text-align: left; 
+    padding-left: 4rem; 
+    padding-right: 4rem;
 }
 
 .image-rectangle {
     max-width: 100%;
     margin-top: 2rem;
+    height: 20rem;
 }
 
 #span-space {
@@ -50,6 +58,9 @@
     border: 1px solid #E6E6E6;
     padding: 2rem;
     margin-top: 2rem;
+    max-height: 20rem;
+    width: 25rem; 
+    overflow-y: auto; 
 }
 
 .location-list-title {
@@ -231,5 +242,15 @@
     }
     .image-container {
         text-align: center;
+    }
+    .align-content{
+        text-align: left; 
+        padding-left: 0rem; 
+        padding-right: 0rem;
+    }
+    .location-list{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
