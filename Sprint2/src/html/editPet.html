@@ -14,7 +14,6 @@
     <script src="../js/validateLogin.js"></script>
     <script src="../js/logOut.js"></script>
     <!-- Loading pets -->
-    <script src="../js/loadPets.js"></script>
     <script src="../js/editPet.js"></script>
     <!-- Validate User Register-->
     <script src="../js/validateUserLogged.js"></script>
@@ -35,23 +34,23 @@
             <h2 id="title-form">Edit Pet</h2>
             <div class="field-with-text">
                 <label class ="field-form" for="lname">Name:</label><br>
-                <input class="input-form"  type="text" id="lname" name="lname" placeholder="${pet.name}"><br>
+                <input class="input-form"  type="text" id="lname" name="lname" placeholder="${pet.name}" readonly><br>
             </div>
             <div class="field-with-text">
                 <label class ="field-form" for="lweight">Weight:</label><br>
-                <input class="input-form" type="text" id="lweight" name="lweight"><br>
+                <input class="input-form" type="text" id="lweight" name="lweight" readonly><br>
             </div>
             <div class="field-with-text">
                 <label class ="field-form" for="lphoto">Photo:</label><br>
-                <input class="input-form" type="text" id="lphoto" name="lphoto"><br>
+                <input class="input-form" type="text" id="lphoto" name="lphoto" readonly><br>
             </div>
             <div class="field-with-text">
                 <label class ="field-form" for="ltypepet">Type of Pet:</label><br>
-                <input class="input-form"  type="text" id="ltypepet" name="ltypepet"><br>
+                <input class="input-form"  type="text" id="ltypepet" name="ltypepet" readonly><br>
             </div>
             <div class="field-with-text">
                 <label class ="field-form" for="lbreed">Breed:</label><br>
-                <input class="input-form" type="text" id="lbreed" name="lbreed"><br>
+                <input class="input-form" type="text" id="lbreed" name="lbreed" readonly><br>
             </div>
             <button class="button-form login-button" id="cancel-button" formaction="mypets.html">Cancel</button>
             <button type="submit" form="form-animal" class="button-form login-button" id="save-button" value="Submit" formaction="mypets.html">Save changes</button>

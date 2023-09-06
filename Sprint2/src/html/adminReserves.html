@@ -14,7 +14,6 @@
     <script src="../js/validateLogin.js"></script>
     <script src="../js/logOut.js"></script>
      <!-- Fill table -->
-    <!--<script src="../js/loadReservationTable.js"></script>-->
     <script type="module" src="../js/loadDayCarePetsTable/loadDayCarePetsTable.js"></script>
     <!-- Validate User Register-->
     <script src="../js/validateUserLogged.js"></script>
@@ -30,49 +29,43 @@
     <script src="../js/loadComponents.js"></script>
     <header id="header"></header>
     <!-- Body page -->
-    <!-- ... Resto del contenido ... -->
     <div class="table-page-administration-user">
         <h2 class="section-title">Reservation Management</h2>
         <div class="search-container">
             <input type="text" id="search-input" placeholder="Search by Daycare...">
             <i class="fas fa-search" id="search-icon"></i>
         </div>
-       <!-- Tabla para escritorio -->
-       <div class="table-responsive w-75 table-desktop">
-        <table class="table table-desktop" id="table-administration">
-            <thead>
-                <tr style="text-align: center;">
-                    <th class="field-table hidden" style="background-color: #15D696; color:white;">id</th>
-                    <th class="field-table" style="background-color: #15D696; color:white;">User</th>
-                    <th class="field-table" style="background-color: #15D696; color:white;">Daycare</th>
-                    <th class="field-table" style="background-color: #15D696; color:white;">Check-in</th>
-                    <th class="field-table" style="background-color: #15D696; color:white;">Check-out</th>
-                    <th class="field-table" style="background-color: #15D696; color:white;">Operations</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Aquí se llenarán los datos de los usuarios para escritorio -->
-            </tbody>
-        </table>
+    <!-- Table desktop bootstrap -->
+        <div class="table-responsive w-75 table-desktop">
+            <table class="table table-desktop" id="table-administration">
+                <thead>
+                    <tr style="text-align: center;">
+                        <th class="field-table hidden" style="background-color: #15D696; color:white;">id</th>
+                        <th class="field-table" style="background-color: #15D696; color:white;">User</th>
+                        <th class="field-table" style="background-color: #15D696; color:white;">Daycare</th>
+                        <th class="field-table" style="background-color: #15D696; color:white;">Check-in</th>
+                        <th class="field-table" style="background-color: #15D696; color:white;">Check-out</th>
+                        <th class="field-table" style="background-color: #15D696; color:white;">Operations</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <!-- Table phone bootstrap -->
+        <div class="table-responsive-sm w-75 table-mobile">
+            <table class="table table-mobile" id="table-administration-mobile">
+                <thead>
+                    <tr style="text-align: center;">
+                        <th class="field-table hidden" style="background-color: #15D696; color:white;">id</th>
+                        <th class="field-table" style="background-color: #15D696; color:white;">User</th>
+                        <th class="field-table" style="background-color: #15D696; color:white;">Daycare</th>
+                        <th class="field-table" style="background-color: #15D696; color:white;">Operations</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
-
-    <!-- Tabla para dispositivos móviles -->
-    <div class="table-responsive-sm w-75 table-mobile">
-        <table class="table table-mobile" id="table-administration-mobile">
-            <thead>
-                <tr style="text-align: center;">
-                    <th class="field-table hidden" style="background-color: #15D696; color:white;">id</th>
-                    <th class="field-table" style="background-color: #15D696; color:white;">User</th>
-                    <th class="field-table" style="background-color: #15D696; color:white;">Daycare</th>
-                    <th class="field-table" style="background-color: #15D696; color:white;">Operations</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Aquí se llenarán los datos de los usuarios para dispositivos móviles -->
-            </tbody>
-        </table>
-    </div>
-</div>
     <!-- Dynamic load of the footer -->   
     <script>loadComponents("../html/components/footer.html", "footer")</script>
     <footer id="footer" style="margin-top: auto;"></footer>

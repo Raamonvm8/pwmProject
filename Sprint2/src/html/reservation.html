@@ -15,6 +15,7 @@
     <script src="../js/logOut.js"></script>
     <!-- Validate User Register-->
     <script src="../js/validateUserLogged.js"></script>
+    <script type="module" src="../js/loadReservation/loadReservation.js"></script>
     <!-- Bootstrap dependencies --->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
@@ -34,48 +35,30 @@
                     <h2 class="title-reservation">Reservation</h2>
                     <div id="fields-inputs">
                         <label class="field-input-reservation">Pet 1</label>
-                        <select class="input-perfil" id="selector-pet-first" name="pet1">
-                            <option value="pet_id_0"></option>
-                            <option value="pet_id_1">Buddy</option>
-                            <option value="pet_id_2">Whiskers</option>
-                            <option value="pet_id_3">Nemo</option>
+                        <select class="input-perfil" id="selector-pet-first" name="pet1" required>
+                            <option value=""></option>
                         </select><br>
                         <label class="field-input-reservation">Pet 2</label>
                         <select class="input-perfil" id="selector-pet-second" name="pet2">
-                            <option value="pet_id_0"></option>
-                            <option value="pet_id_1">Buddy</option>
-                            <option value="pet_id_2">Whiskers</option>
-                            <option value="pet_id_3">Nemo</option>
+                            <option value=""></option>
                         </select><br>
                         <label class="field-input-reservation">Pet 3</label>
                         <select class="input-perfil" id="selector-pet-third" name="pet3">
-                            <option value="pet_id_0"></option>
-                            <option value="pet_id_1">Buddy</option>
-                            <option value="pet_id_2">Whiskers</option>
-                            <option value="pet_id_3">Nemo</option>
+                            <option value=""></option>
                         </select><br>
                         <label class="field-input-reservation">Daycare</label>
-                        <input class="input-perfil" placeholder="Aquatic Oasis" readonly /><br>
+                        <input class="input-perfil" id="daycare-location" readonly /><br>
                         <label class="field-input-reservation">Addition 1</label>
                         <select class="input-perfil" id="selector-addition-first" name="addition1">
-                            <option value="service_id_0"></option>
-                            <option value="service_id_1">Grooming</option>
-                            <option value="service_id_2">Playroom Access</option>
-                            <option value="service_id_3">Feeding Service</option>
+                            <option value=""></option>
                         </select><br>
                         <label class="field-input-reservation">Addition 2</label>
                         <select class="input-perfil" id="selector-addition-second" name="addition2">
-                            <option value="service_id_0"></option>
-                            <option value="service_id_1">Grooming</option>
-                            <option value="service_id_2">Playroom Access</option>
-                            <option value="service_id_3">Feeding Service</option>
+                            <option value=""></option>
                         </select><br>
                         <label class="field-input-reservation">Addition 3</label>
                         <select class="input-perfil" id="selector-addition-third" name="addition3">
-                            <option value="service_id_0"></option>
-                            <option value="service_id_1">Grooming</option>
-                            <option value="service_id_2">Playroom Access</option>
-                            <option value="service_id_3">Feeding Service</option>
+                            <option value=""></option>
                         </select><br>
                     </div>
                 </div>
@@ -85,27 +68,38 @@
                     </div>
                     <div id="date-reservation-input">
                         <label class="date-reservation">Check in: </label>
-                        <input type="date" class="input-date" id="datePicker"><br>
+                        <input type="date" class="input-date" id="datePickerCheckIn" value="2023-09-06"><br>
                         <label class="date-reservation">Check out:</label>
-                        <input type="date" class="input-date" id="datePicker">
+                        <input type="date" class="input-date" id="datePickerCheckOut" value="2023-09-07">                        
+                        
                     </div>
                     <label class="field-input-total-price">Total price:</label>
-                    <input class="input-date" placeholder="15€" id="input-field-total-price"/>
+                    <input class="input-date" id="daycare-price" readonly/>
+
+                    <label class="field-input-reservation">Daycare Services</label>
+                    <ul id="daycare-services"></ul>
                     <div id="label-availability-reservation">
-                        <h4 id="availability-reservation">Availability: </h><br>
+                        <h4 id="availability-reservation">Availability: Available</h4><br>
                     </div>
                     <div class="availability-section">
-                        <button type="button" class="time-box">16:00</button>
-                        <button type="button" class="time-box">17:00</button>
-                        <button type="button" class="time-box">18:00</button>
+                        <label class="time-box">
+                            <input type="radio" name="selected-time" value="16:00"> 16:00
+                        </label>
+                        <label class="time-box">
+                            <input type="radio" name="selected-time" value="17:00"> 17:00
+                        </label>
+                        <label class="time-box">
+                            <input type="radio" name="selected-time" value="18:00"> 18:00
+                        </label>
                     </div>
                     <div id="button-position-reservation">
-                        <button type="submit" form="form-reservation" class="confirm-button" value="Submit" onclick="location.href='history.html'">Confirm</button>
+                        <button type="submit" form="form-reservation" class="confirm-button" id="confirm-button">Confirm</button>
                     </div>
                 </div>                
             </div>
         </div>   
     </form>
+    
     <!-- Dynamic load of the footer -->
     <script>loadComponents("../html/components/footer.html", "footer")</script>
     <footer id="footer" style="margin-top: auto;"></footer>
