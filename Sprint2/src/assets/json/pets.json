@@ -23,7 +23,7 @@
       "idOwner": "Ramón",
       "name": "Nemo",
       "weight": "0.5",
-      "photo": "nemo.jpg",
+      "photo": "../assets/images/mypets/foto_perro_Ramon.png",
       "typeOfPet": "Fish",
       "breed": "Clownfish"
     }

@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', function() {
             emailInput.value = userData.email;
             passwordInput.value = "********"; 
 
-            pets.textContent = userData.pets;
+            if (Array.isArray(userData.pets)) {
+                pets.textContent = userData.pets.length;
+            } else {
+                pets.textContent = '0';
+            }
             reservations.textContent = userData.reservations;
 
             if (userData.photo) {

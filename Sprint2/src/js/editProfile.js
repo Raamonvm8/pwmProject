@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const lastNameInput = document.getElementById('lapellido');
         const emailInput = document.getElementById('lcorreo');
         const passwordInput = document.getElementById('llpass');
-
+        const photoInput = document.getElementById('lphoto');
         if (isAdmin) {
             const selectedUserJSON = localStorage.getItem('user_selected_by_admin');
             if (selectedUserJSON) {
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 lastNameInput.value = selectedUser.surname || '';
                 emailInput.value = selectedUser.email || '';
                 passwordInput.value = "********";
+                photoInput.value = selectedUser.photo.split('/').pop();
             } else {
                 if (userDataJSON) {
                     const userData = JSON.parse(userDataJSON);
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     lastNameInput.value = userData.surname || '';
                     emailInput.value = userData.email || '';
                     passwordInput.value = "********";
+                    photoInput.value = userData.photo.split('/').pop();
                 } else {
                     window.location.href = 'error.html';
                 }
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 lastNameInput.value = userData.surname || '';
                 emailInput.value = userData.email || '';
                 passwordInput.value = "********";
+                photoInput.value = userData.photo.split('/').pop();
             } else {
                 window.location.href = 'error.html';
             }

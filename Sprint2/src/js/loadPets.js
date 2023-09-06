@@ -1,81 +1,29 @@
-    const petsData = {
-        "pets": [
-        {
-            "id": "Pet1",
-            "idOwner": "Ramón",
-            "name": "Mister",
-            "weight": "6",
-            "photo": "../assets/images/mypets/foto_perro_Ramon.png",
-            "typeOfPet": "Dog",
-            "breed": "Yorkshire"
-        },
-        {
-            "id": "pet2",
-            "idOwner": "Ramón",
-            "name": "Coco",
-            "weight": "10",
-            "photo": "../assets/images/mypets/foto_perro_Marta.jpg",
-            "typeOfPet": "Dog",
-            "breed": "Siamese"
-        },
-        {
-            "id": "pet3",
-            "idOwner": "Ramón",
-            "name": "Nemo",
-            "weight": "0.5",
-            "photo": "../assets/images/mypets/foto_perro_Ramon.png",
-            "typeOfPet": "Fish",
-            "breed": "Clownfish"
-        },
-        {
-            "id": "pet3",
-            "idOwner": "Ramón",
-            "name": "Nemo",
-            "weight": "0.5",
-            "photo": "../assets/images/mypets/foto_perro_Marta.jpg",
-            "typeOfPet": "Fish",
-            "breed": "Clownfish"
-        },
-        {
-            "id": "pet3",
-            "idOwner": "Ramón",
-            "name": "Nemo",
-            "weight": "0.5",
-            "photo": "../assets/images/mypets/foto_perro_Ramon.png",
-            "typeOfPet": "Fish",
-            "breed": "Clownfish"
-        }
-        ]
-    };
+document.addEventListener('DOMContentLoaded', function() {
 
-    document.addEventListener('DOMContentLoaded', function() {
-        // Obtener el usuario actual del localStorage
-        const userDataJSON = localStorage.getItem('user_data');
-        if (userDataJSON) {
-            const userData = JSON.parse(userDataJSON);
+    const userDataJSON = localStorage.getItem('user_data');
+    if (userDataJSON) {
+        const userData = JSON.parse(userDataJSON);
+
+        if (userData && userData.pets) {
+            const petsContainer = document.getElementById('pets-container');
             
-            // Verificar que userData tiene una propiedad 'name' antes de usarla
-            if (userData && userData.name) {
-                // Obtener el contenedor de mascotas
-                const petsContainer = document.getElementById('pets-container');
-    
-                // Filtrar las mascotas del usuario actual
-                const userPets = petsData.pets.filter(pet => pet.idOwner === userData.name);
-    
-                // Generar el HTML de las mascotas
-                userPets.forEach(pet => {
-                    const petDiv = document.createElement('div');
-                    petDiv.innerHTML = `
-                        <div class="col">
-                            <div class="photos-pet">
-                                <a href="editPet.html"><img src="${pet.photo}" alt="foto-animal" class="rounded-circle"></a>
-                                <h2 class="animal-name">${pet.name}</h2>
-                            </div>
+            userData.pets.forEach((pet, index) => {
+                const petDiv = document.createElement('div');
+                petDiv.innerHTML = `
+                    <div class="col" id="pet-${index}">
+                        <div class="photos-pet">
+                            <a href="editPet.html"><img src="${pet.photo}" alt="foto-animal" class="rounded-circle"></a>
+                            <h2 class="animal-name">${pet.name}</h2>
                         </div>
-                    `;
-                    petsContainer.appendChild(petDiv);
+                    </div>
+                `;
+                
+                petDiv.addEventListener('click', function() {
+                    localStorage.setItem('selectedPet', JSON.stringify(pet));
+                    window.location.href = 'editPet.html';
                 });
-            }
+                petsContainer.appendChild(petDiv);
+            });
         }
-    });
-    
+    }
+});

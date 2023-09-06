@@ -1,30 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const userDataJSON = localStorage.getItem('user_data');
+    const petDataJSON = localStorage.getItem('selectedPet');
     
-    if (userDataJSON) {
-        const userData = JSON.parse(userDataJSON);
-        
-        const petIdToEdit = "pet2"; // Asegúrate de obtener este valor correctamente
-        console.log(userData);
-        
-        const userPets = petsData.pets.filter(pet => pet.idOwner === userData.name);
-        
-        const petToEdit = userPets.find(pet => pet.id === petIdToEdit);
+    if (petDataJSON) {
+        const petData = JSON.parse(petDataJSON);
         
         const nameInput = document.getElementById('lname');
         const weightInput = document.getElementById('lweight');
+        const photoInput = document.getElementById('lphoto');
         const typeInput = document.getElementById('ltypepet');
         const breedInput = document.getElementById('lbreed');
         
-        if (petToEdit) {
-            nameInput.value = petToEdit.name;
-            weightInput.value = petToEdit.weight;
-            typeInput.value = petToEdit.typeOfPet;
-            breedInput.value = petToEdit.breed;
-        } else {
-            console.log('Pet not found for editing');
-        }
+        nameInput.value = petData.name;
+        weightInput.value = petData.weight;
+        
+        const photoFileName = petData.photo.split('/').pop();
+        photoInput.value = photoFileName;
+        typeInput.value = petData.typeOfPet;
+        breedInput.value = petData.breed;
     } else {
-        console.log('User data not found');
+        console.log('Pet data not found');
     }
+
+    const cancelButton = document.getElementById('cancel-button');
+    const saveButton = document.getElementById('save-button');
+
+    cancelButton.addEventListener('click', function() {
+        localStorage.removeItem('selectedPet'); 
+        window.location.href = 'mypets.html'; 
+    });
+
+    saveButton.addEventListener('click', function() {
+        localStorage.removeItem('selectedPet'); 
+        window.location.href = 'mypets.html';
+    });
 });

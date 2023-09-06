@@ -6,7 +6,7 @@
       "surname": "Valls Martin",
       "email": "ramon@gmail.com",
       "password": "1234",
-      "photo": "../assets/images/foto_perfil_Ramón.jpg",
+      "photo": "../assets/images/foto_perfil_Ramon.jpg",
       "pets": 2,
       "admin": true,
       "reservations": 3,

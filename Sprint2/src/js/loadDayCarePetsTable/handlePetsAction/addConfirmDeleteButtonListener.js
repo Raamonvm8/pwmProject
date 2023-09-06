@@ -1,5 +1,5 @@
 export function addConfirmDeleteButtonListener() {
-    // Confim button event
+    // Confirm button event
     const confirmDeleteButton = document.getElementById('confirmDeleteButton');
     confirmDeleteButton.addEventListener('click', function() {
     const deletIdElement = document.getElementById('deleteIdEvent');

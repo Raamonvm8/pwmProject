@@ -81,23 +81,6 @@ tr:hover {
     transition: background-color 0.3s;
 }
 
-@media screen and (max-width: 768px) {
-    .table-desktop {
-        display: none;
-    }
-    .table-mobile {
-        display: flexbox;
-    }
-}
-@media screen and (min-width: 769px) {
-    .table-mobile {
-        display: none;
-    }
-    .table-desktop {
-        display: flexbox;
-    }
-}
-
 .hidden{
     display: none;
 }
@@ -114,4 +97,23 @@ tr:hover {
     justify-content: center;
     height: 2.0rem;
     width: 2.0rem;
+}
+
+/* PC */
+@media screen and (max-width: 768px) {
+    .table-desktop {
+        display: none;
+    }
+    .table-mobile {
+        display: flexbox;
+    }
+}
+/* Phones */
+@media screen and (min-width: 769px) {
+    .table-mobile {
+        display: none;
+    }
+    .table-desktop {
+        display: flexbox;
+    }
 }
