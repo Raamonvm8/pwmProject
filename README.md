@@ -4,6 +4,6 @@
 
 &#10004; 2 Sprint -> Diseño final con HTML, CSS y JavaScript<br>
 
-3 Sprint -> Diseño final con Angular y Firebase<br>
+&#10004; 3 Sprint -> Diseño final con Angular y Firebase<br>
 
 4 Sprint -> Versión Beta con IONIC<br>
