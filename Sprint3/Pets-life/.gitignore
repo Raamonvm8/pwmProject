@@ -42,16 +42,10 @@ testem.log
 Thumbs.db
 
 # Bootstrap
-/node_modules/bootstrap/
-npm-debug.log
-yarn-error.log
+/node_modules/bootstrap
 
 # Popper.js
-/node_modules/popper.js/
-npm-debug.log
-yarn-error.log
+/node_modules/popper.js
 
 # jQuery
-/node_modules/jquery/*
-npm-debug.log
-yarn-error.log
+/node_modules/jquery
