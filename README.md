@@ -6,4 +6,4 @@
 
 &#10004; 3 Sprint -> Diseño final con Angular y Firebase<br>
 
-4 Sprint -> Versión Beta con IONIC<br>
+&#10004; 4 Sprint -> Versión Beta con IONIC<br>
