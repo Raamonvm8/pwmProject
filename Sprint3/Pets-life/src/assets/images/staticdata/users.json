@@ -1,0 +1,26 @@
+
+{
+    "users": [
+        {
+        "id": 1,
+        "Nombre": "Ramón",
+        "email": "ramon@gmail.com",
+        "password": "12345678",
+        "administrador": true
+        },
+        {
+        "id": 2,
+        "Nombre": "Alejandro",
+        "email": "ale@gmail.com",
+        "password": "12345678",
+        "administrador": false
+        },
+        {
+        "id": 3,
+        "Nombre": "Marta",
+        "email": "marta@gmail.com",
+        "password": "12345678",
+        "administrador": false
+        }
+    ]
+}
