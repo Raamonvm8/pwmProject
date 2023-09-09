@@ -1,0 +1,85 @@
+
+<body id="body-form">
+    
+
+    <!-- Body page -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="rectangle-arriba">
+                <div class="col-md-6 col-lg-4">
+                    <div class="image-container">
+                        <img src="../assets/images/mapa_granCanaria.png" alt="Mapa Gran Canaria" class="image-rectangle"/>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="location-list">
+                        <h3 class="location-list-title">Featured Daycare Centers</h3>
+                        <ul>
+                            <li class="list-element"><span class="location-name">Pet Paradise</span> - San Juan</li>
+                            <li class="list-element"><span class="location-name">Furry Friends Haven</span> - Las Palmas</li>
+                            <li class="list-element"><span class="location-name">Pawfect Retreat</span> - Maspalomas</li>
+                            <li class="list-element"><span class="location-name">Whisker Wonderland</span> - Telde</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="info-container">
+                <h2 class="info-title">Pet Paradise - San Juan</h2>
+                <div class="white-rectangle">
+                    <div class="text-information-services">
+                    <p>Welcome to Pet Paradise - San Juan! We specialize in providing top-notch care for your pets.</p>
+                    <p>Our services include:</p>
+                    </div>
+                    <ul class="service-list">
+                        <li>Daily exercise and play sessions</li>
+                        <li>Premium grooming services</li>
+                        <li>Special dietary accommodations</li>
+                    </ul>
+                    <div class="text-information-services">
+                        <p>Our trained staff is dedicated to ensuring a safe, comfortable, and engaging environment for your furry friends.</p>
+                    </div>
+                </div>
+                <div class="reserve-button">
+                    <a [routerLink]="['/reservation']" class="button-reservation"><strong>Make a Reservation</strong></a>
+                </div>
+            </div>  
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 w-75">
+                <div class="reviews-container">
+                    <h2 class="reviews-title">Reviews</h2>
+                    <div class="review">
+                        <img src="../assets/images/chica_comentario.jpg" alt="User Photo" class="image-user"/>
+                        <h4 class="user-name">Laura</h4>
+                        <div class="comments-users">
+                            <p class="user-text">I can't believe how wonderful the daycare services are! My furry friend had the time of his life. Thank you for the amazing experience!</p>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <img src="../assets/images/chico_comentario.jpg" alt="User Photo" class="image-user"/>
+                        <h4 class="user-name">Bill</h4>
+                        <div class="comments-users">
+                            <p class="user-text">Absolutely fantastic! The care and attention my pet received were beyond my expectations. The team here truly understands pets' needs.</p>
+                        </div>
+                    </div>
+                    <div class="review-form">
+                        <h3 class="review-form-title">Leave a Review</h3>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="user-review">Your Review</label>
+                                <textarea id="user-review" name="user-review" rows="4" class="form-control" required></textarea>
+                            </div>
+                            <div id="button-review-position">
+                                <button type="submit" class="btn btn-primary submit-review-button">Submit Review</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

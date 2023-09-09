@@ -1,0 +1,21 @@
+<header class="header">
+    <div class="logo-container">
+        <nav class="nav-header">
+            <a href="homePage.html" aria-label="Home" class="imagen-logo"><i class="fa-solid fa-paw logo" id="logo-footer-icon"></i></a>
+            <a [routerLink]="['/our-services']" class="link" id="link1">Our Services</a>
+            <a [routerLink]="['/about-us']" class="link">About us</a>
+        </nav>
+    </div>
+    <a class="imagen-hamburguer"><i class="fa-solid fa-bars" id="boton-hamburguesa-header"></i></a>
+    <div class="links-register-log">
+        <button class="register-button hide" [routerLink]="['/sign-up']"><i class="fa-solid fa-right-from-bracket"></i> Register</button>
+        <button class="login-button hide" [routerLink]="['/login']"><i class="fa-solid fa-user"></i> Login</button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <a [routerLink]="['/our-services']"  class="link">Our Services</a>
+        <a [routerLink]="['/aboutUs']" class="link">About us</a>
+        <a href="mypets.html" class="link">Pets</a>
+        <a href="reservation.html" class="link">Reservations</a>
+    </div>
+    <input type="hidden" id="mobileMenuState" value="closed">
+</header>
