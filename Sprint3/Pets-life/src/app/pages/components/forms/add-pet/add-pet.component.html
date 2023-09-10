@@ -1,0 +1,29 @@
+
+<body id="body-form">
+    <div class="form-animal-position h-75">
+        <form class="form-animal" id="form-animal">
+            <h2 id="title-form">Add Pet</h2>
+            <div class="field-with-text">
+                <label class ="field-form" for="lname">Name: <span class="required">*</span></label><br>
+                <input class="input-form"  type="text" id="lname" name="lname"><br>
+            </div>
+            <div class="field-with-text">
+                <label class ="field-form" for="lweight">Weight: <span class="required">*</span></label><br>
+                <input class="input-form" type="text" id="lweight" name="lweight"><br>
+            </div>
+            <div class="field-with-text">
+                <label class ="field-form" for="lphoto">Photo: <span class="required">*</span></label><br>
+                <input class="input-form" type="text" id="lphoto" name="lphoto"><br>
+            </div>
+            <div class="field-with-text">
+                <label class ="field-form" for="ltypepet">Type of pet: <span class="required">*</span></label><br>
+                <input class="input-form"  type="text" id="ltypepet" name="ltypepet"><br>
+            </div>
+            <div class="field-with-text">
+                <label class ="field-form" for="lbreed">Breed: <span class="required">*</span></label><br>
+                <input class="input-form" type="text" id="lbreed" name="lbreed"><br>
+            </div>
+            <button type="submit" form="form-animal" id="log"  class="button-form login-button" value="Submit" [routerLink]="['/my-pets']">New pet</button>
+        </form>
+    </div>   
+</body>
