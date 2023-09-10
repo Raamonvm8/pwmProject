@@ -8,6 +8,13 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { InitPageComponent } from './pages/init-page/init-page.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { HistoryComponent } from './pages/history/history.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { MyPetsComponent } from './pages/my-pets/my-pets.component';
+import { AddPetComponent } from './pages/components/forms/add-pet/add-pet.component';
+import { EditPetComponent } from './pages/components/forms/edit-pet/edit-pet.component';
+import { EditProfileComponent } from './pages/components/forms/edit-profile/edit-profile.component';
+import { AdminUsersComponent } from './pages/components/admins/admin-users/admin-users.component';
+import { AdminBookingsComponent } from './pages/components/admins/admin-bookings/admin-bookings.component';
 
 const routes: Routes = [
 { path: '', component: HomepageComponent },
@@ -18,6 +25,14 @@ const routes: Routes = [
   { path: 'init-page', component: InitPageComponent },
   { path: 'reservation', component: ReservationComponent },
   { path: 'history', component: HistoryComponent },
+  { path: 'homepage', component: HomepageComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'my-pets', component: MyPetsComponent },
+  { path: 'add-pet', component: AddPetComponent },
+  { path: 'edit-pet', component: EditPetComponent },
+  { path: 'edit-profile', component: EditProfileComponent },
+  { path: 'admin-users', component: AdminUsersComponent },
+  { path: 'admin-bookings', component: AdminBookingsComponent },
 ];
 
 @NgModule({

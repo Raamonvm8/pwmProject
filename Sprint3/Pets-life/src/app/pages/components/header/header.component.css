@@ -14,14 +14,17 @@
     margin-top: 10rem;
 }
 
+
 .imagen-logo, .imagen-hamburguer {
     text-decoration: none;
+    color: white;
 }
+
 #logo-footer-icon:hover{
     color: rgb(19, 165, 112);
 }
 .imagen-logo {
-    margin-right: 10px;
+    margin-right: 30px;
 }
 
 .logo-container {
@@ -68,6 +71,7 @@
     background-color: transparent;
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 .register-button:hover, .login-button:hover {
     color: #07F9A2;

@@ -10,7 +10,7 @@
 
 /* Imagen del mapa */
 .image-rectangle {
-    max-width: 35%;
+    max-width: 100%;
     margin-top: 2rem;
     height: auto;
     border: 1px solid #E6E6E6;
@@ -48,8 +48,8 @@
 
 /* Lista de ubicaciones */
 .location-list {
-    width: 1400%;
-    margin-left: -300px;
+    width: 160%;
+    margin-left: 100px;
     text-align: center;
     background-color: #F7F7F7;
     border-radius: 10px;

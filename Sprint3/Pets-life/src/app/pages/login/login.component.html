@@ -13,7 +13,7 @@
                 <input class="input-form" type="password" id="password" placeholder="********"><br>
             </div>
             <div class="button-login-position">
-                <button type="button" form="form-login" id="log" class="button-form login-button" value="Submit" onclick="lanza_modal2()">Login</button>
+                <button type="button" form="form-login" id="log" class="button-form login-button" value="Submit" [routerLink]="['/init-page']">Login</button>
             </div>
             <a class="signup-link" [routerLink]="['/signUp']">Don't have an account yet? Sign up</a>
         </form>
