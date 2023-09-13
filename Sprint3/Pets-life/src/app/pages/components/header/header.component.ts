@@ -8,7 +8,7 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent {
   faPaw=faPaw;
-  isLoggedIn: boolean = true;
-  isAdmin: boolean = true;
+  isLoggedIn: boolean = false;
+  isAdmin: boolean = false;
 
 }

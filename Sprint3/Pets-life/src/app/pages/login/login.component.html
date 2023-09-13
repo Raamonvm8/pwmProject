@@ -6,15 +6,16 @@
             <h1 id="title-form">Login</h1>  
             <div class="field-with-text">  
                 <label class="field-form">Email <span class="required">*</span></label><br>
-                <input class="input-form" type="email" id="email" name="email" required placeholder="Enter your email">
+                <input class="input-form" type="email" id="email" [(ngModel)]="Email" name="email" required placeholder="Enter your email">
             </div>
             <div class="field-with-text">
                 <label class="field-form">Password <span class="required">*</span></label><br>
-                <input class="input-form" type="password" id="password" placeholder="********"><br>
+                <input class="input-form" type="password" id="password" [(ngModel)]="Password" placeholder="********"><br>
             </div>
             <div class="button-login-position">
-                <button type="button" form="form-login" id="log" class="button-form login-button" value="Submit" [routerLink]="['/init-page']">Login</button>
+                <button type="button" form="form-login" id="log" class="button-form login-button" value="Submit" (click)="login()">Login</button>
             </div>
+
             <a class="signup-link" [routerLink]="['/signUp']">Don't have an account yet? Sign up</a>
         </form>
     </div>

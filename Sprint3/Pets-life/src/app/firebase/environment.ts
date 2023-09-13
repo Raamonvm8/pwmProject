@@ -1,19 +1,25 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore} from 'firebase/firestore'
-import {getAuth} from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
-const environment = {
-  apiKey: "AIzaSyBriOlSgw_MsqBzrUDVz-wyf1E-3j7j_7E",
-  authDomain: "my-pets-3e01c.firebaseapp.com",
-  projectId: "my-pets-3e01c",
-  storageBucket: "my-pets-3e01c.appspot.com",
-  messagingSenderId: "142504207925",
-  appId: "1:142504207925:web:cfa2b236667921e840737c"
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+export const environment = {
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyDEQizNb5XzqzQdyO-PsyolD50Q5bdIS1o",
+    authDomain: "myapp3-c3cca.firebaseapp.com",
+    projectId: "myapp3-c3cca",
+    storageBucket: "myapp3-c3cca.appspot.com",
+    messagingSenderId: "454349153267",
+    appId: "1:454349153267:web:38e00a652f78fc314de886"
+  }
+  
 };
 
 // Initialize Firebase
-const app = initializeApp(environment);
 
-// Initialize Cloud Firestore and get a reference to the service
-export const db = getFirestore(app);
-export const auth = getAuth(app)
+const app = initializeApp(environment.firebaseConfig);
+const autentication = getAuth(app);

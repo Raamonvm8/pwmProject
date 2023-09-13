@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms'; 
 
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,13 @@ import { EditPetComponent } from './pages/components/forms/edit-pet/edit-pet.com
 import { EditProfileComponent } from './pages/components/forms/edit-profile/edit-profile.component';
 import { AdminUsersComponent } from './pages/components/admins/admin-users/admin-users.component';
 import { AdminBookingsComponent } from './pages/components/admins/admin-bookings/admin-bookings.component';
+import { initializeApp } from 'firebase/app';
+import {environment} from '../app/firebase/environment';
+//import {provideAuth, getAuth} from 'firebase/auth';
+import { AngularFireModule } from '@angular/fire/compat'; 
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import {provideAuth, getAuth} from '@angular/fire/auth';
+
 
 
 @NgModule({
@@ -51,6 +59,11 @@ import { AdminBookingsComponent } from './pages/components/admins/admin-bookings
     RouterModule,
     AppRoutingModule,
     FontAwesomeModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    provideAuth(() => getAuth()),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
