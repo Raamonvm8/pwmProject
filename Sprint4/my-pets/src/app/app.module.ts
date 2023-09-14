@@ -6,9 +6,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EmptyFieldsPopoverComponent } from './empty-fields-popover/empty-fields-popover.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, EmptyFieldsPopoverComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

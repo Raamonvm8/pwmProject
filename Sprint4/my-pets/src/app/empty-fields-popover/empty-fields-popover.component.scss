@@ -1,0 +1,22 @@
+/* Estilo personalizado para el popover */
+ion-content.custom-popover-content {
+    background-color: #F8F8F8; /* Cambia el color de fondo a tu elección */
+  }
+  
+  /* Estilo personalizado para el elemento de la lista */
+  ion-item.custom-item {
+    cursor: pointer; /* Cambia el cursor al estilo de puntero */
+  }
+  
+  /* Estilos para el texto del elemento de la lista */
+  ion-label.custom-label {
+    color: white; /* Color de texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 16px; /* Tamaño de fuente personalizado, ajusta según tus preferencias */
+  }
+  
+  /* Estilo de fondo rojo para el elemento de la lista */
+  ion-item.custom-item {
+    background-color: red; /* Cambia el color de fondo a rojo o tu elección */
+  }
+  
