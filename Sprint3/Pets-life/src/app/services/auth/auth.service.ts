@@ -23,15 +23,28 @@ export class AuthService {
   private userLogged: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   currentUser: AppUser | undefined;
 
-  
-
   constructor(private auth: AngularFireAuth) {
-
-
+    this.auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.currentUser = {
+          id: user.uid,
+          correo: user.email || '',
+          apellidos: '', 
+          isAdmin: false, 
+          nombre: '', 
+          foto: '', 
+        };
+        this.userLogged.next(true); 
+      } else {
+        this.currentUser = undefined;
+        this.userLogged.next(false);
+      }
+    });
   }
 
+
   get isLoggedIn() {
-    return this.userLogged.asObservable(); // convierte el loggedIn a un Observable para poder suscribirse
+    return this.userLogged.asObservable(); 
   }
   /*async createUser(email: string, contra: string) {
     return this.auth.createUserWithEmailAndPassword(email, contra)
