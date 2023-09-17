@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms'; 
 
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './routing-module';
 import { HeaderComponent } from './pages/components/header/header.component';
