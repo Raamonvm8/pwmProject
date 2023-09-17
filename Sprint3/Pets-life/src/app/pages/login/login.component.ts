@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AuthenticationService } from '../../services/authentication.service';
 import { Router } from '@angular/router';
+import {UserService} from "../../services/users/user.service";
+import { AuthService } from 'src/app/services/auth/auth.service';
 
 
 
@@ -14,12 +15,11 @@ export class LoginComponent {
   Email: string = '';
   Password: string = '';
 
-  constructor(private authService: AuthenticationService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router) {
   }
-  login() {
-    //this.authService.login(this.Name, this.Password)
-    this.authService.loginUser(this.Email,this.Password)
-      .then(res => {
+  async login() {
+     this.authService.loginUser(this.Email,this.Password)
+    .then(res => {
         console.log("login: ", res)
         this.router.navigate(["/init-page"])
       })

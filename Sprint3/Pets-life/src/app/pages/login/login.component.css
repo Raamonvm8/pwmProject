@@ -12,6 +12,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 #log, #save-button, #cancel-button{
@@ -47,6 +48,8 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0 2rem;
+    
+
 }
 .form-register-position, .form-animal-position{
     margin-bottom: 2rem;
@@ -60,6 +63,7 @@ body{
     box-shadow: 40px 20px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #eeeeee;
+    
 }
 
 #title-form {

@@ -24,12 +24,18 @@ import { EditPetComponent } from './pages/components/forms/edit-pet/edit-pet.com
 import { EditProfileComponent } from './pages/components/forms/edit-profile/edit-profile.component';
 import { AdminUsersComponent } from './pages/components/admins/admin-users/admin-users.component';
 import { AdminBookingsComponent } from './pages/components/admins/admin-bookings/admin-bookings.component';
-import { initializeApp } from 'firebase/app';
 import {environment} from '../app/firebase/environment';
+
+
+
+
 //import {provideAuth, getAuth} from 'firebase/auth';
 import { AngularFireModule } from '@angular/fire/compat'; 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import {provideAuth, getAuth} from '@angular/fire/auth';
+import { provideFirebaseApp } from '@angular/fire/app';
+import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/compat/storage';
+
 
 
 
@@ -52,7 +58,8 @@ import {provideAuth, getAuth} from '@angular/fire/auth';
     EditPetComponent,
     EditProfileComponent,
     AdminUsersComponent,
-    AdminBookingsComponent
+    AdminBookingsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -62,7 +69,8 @@ import {provideAuth, getAuth} from '@angular/fire/auth';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    provideAuth(() => getAuth()),
+    AngularFireStorageModule,
+    provideAuth(() => getAuth())
 
   ],
   providers: [],
