@@ -23,17 +23,19 @@ import { EditPetComponent } from './pages/components/forms/edit-pet/edit-pet.com
 import { EditProfileComponent } from './pages/components/forms/edit-profile/edit-profile.component';
 import { AdminUsersComponent } from './pages/components/admins/admin-users/admin-users.component';
 import { AdminBookingsComponent } from './pages/components/admins/admin-bookings/admin-bookings.component';
-import {environment} from '../app/firebase/environment';
-
+import {environment} from './environments/environment';
+import { FirestoreService } from './services/firestore/firestore.service';
+import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
+import {HttpClientModule} from '@angular/common/http';
+import {provideFirestore, getFirestore} from '@angular/fire/firestore';
 
 
 
 //import {provideAuth, getAuth} from 'firebase/auth';
 import { AngularFireModule } from '@angular/fire/compat'; 
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import {provideAuth, getAuth} from '@angular/fire/auth';
-import { provideFirebaseApp } from '@angular/fire/app';
-import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 
 
@@ -58,7 +60,6 @@ import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/comp
     EditProfileComponent,
     AdminUsersComponent,
     AdminBookingsComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -66,10 +67,14 @@ import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/comp
     AppRoutingModule,
     FontAwesomeModule,
     FormsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
     AngularFireStorageModule,
-    provideAuth(() => getAuth())
+    AngularFireDatabaseModule,
+    provideAuth(() => getAuth()),
+    provideFirebaseApp( () => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore()),
+
 
   ],
   providers: [],

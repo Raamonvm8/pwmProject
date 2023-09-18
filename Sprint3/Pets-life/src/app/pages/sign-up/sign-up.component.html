@@ -1,29 +1,29 @@
 
 <body id="body-form">   
     <div class="form-register-position  h-75">
-        <form class="form-register" id="form-register">
+        <form class="form-register" id="form-register" >
             <h2 class="title-form" id="login-form-header">Registration Form</h2><br>
             <div class="field-with-text">  
                 <label class="field-form">Name <span class="required">*</span></label><br>
-                <input class="input-form" placeholder="****"/><br>
+                <input class="input-form" [(ngModel)]="user.nombre" name="nombre" placeholder="****"/><br>
             </div>
             <div class="field-with-text">  
                 <label class="field-form">Surname</label><br>
-                <input class="input-form" placeholder="****"/><br>
+                <input class="input-form" [(ngModel)]="user.apellidos" name="apellidos" placeholder="****"/><br>
             </div>
             <div class="field-with-text">  
                 <label class="field-form">Email <span class="required">*</span></label><br>
-                <input class="input-form" placeholder="****"/><br>
+                <input class="input-form" [(ngModel)]="user.correo" name="correo" placeholder="****"/><br>
             </div>
             <div class="field-with-text">
                 <label class="field-form">Password: <span class="required">*</span></label><br>        
-                <input class="input-form" placeholder="****"/><br>
+                <input class="input-form" [(ngModel)]="pass" name="password" placeholder="****"/><br>
             </div>
             <div class="field-with-text">  
                 <label class="field-form">Photo <span class="required">*</span></label><br>
-                <input class="input-form" placeholder="****"/><br>
+                <input class="input-form" [(ngModel)]="user.foto" name="foto" placeholder="****"/><br>
             </div>
-            <button type="submit" form="form-register" id="log" class="button-form login-button" value="Submit" [routerLink]="['/init-page']">Sign Up</button>
+            <button type="submit" form="form-register" id="log" class="button-form login-button" value="Submit" (click)="signUp()">Sign Up</button>
         </form>
     </div>
 </body>

@@ -14,6 +14,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FirestoreService } from '../firestore/firestore.service'; 
 import { BehaviorSubject, Observable } from 'rxjs';
 import { AppUser } from 'src/app/models/User/user/user.model';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 
 @Injectable({
@@ -29,6 +30,7 @@ export class AuthService {
         this.currentUser = {
           id: user.uid,
           correo: user.email || '',
+          password: '',
           apellidos: '', 
           isAdmin: false, 
           nombre: '', 
@@ -46,8 +48,27 @@ export class AuthService {
   get isLoggedIn() {
     return this.userLogged.asObservable(); 
   }
-  /*async createUser(email: string, contra: string) {
+  async createUser(email: string, contra: string) {
     return this.auth.createUserWithEmailAndPassword(email, contra)
+  }
+
+  /*private async setUser(id: string, email: string) {
+    this.firestore.getDocByIdSnapshot(`users/${id}`).then(docData => {
+      if (docData!=undefined){
+        this.currentUser = {
+          id: id,
+          nombre: docData!['nombre'],
+          apellidos:docData!['apellidos'],
+          correo: email,
+          isAdmin: docData!['is_admin'],
+          foto: docData!['foto']
+        };
+        this.userLogged.next(true)
+        console.log(this.userLogged)
+      }else{
+        this.userLogged.next(false)
+      }
+    })
   }*/
 
   async loginUser(userEmail:string, userPassword:string) {

@@ -12,7 +12,6 @@ export class FirestoreService {
 
   constructor(private firestore: Firestore) {
   }
-
   getAllDocs(coll: string) {
     const usersRef = collection(this.firestore, coll)
     return collectionData(usersRef, {idField: 'id'}) as Observable<any>
@@ -33,7 +32,7 @@ export class FirestoreService {
     return updateDoc(collRef, data);
   }
 
-  createDocWithId(coll: string, data: { is_admin: boolean; photo_url: string; username: string }, id: string) {
+  createDocWithId(coll: string, data: { email: string; id: string; is_admin: boolean; photo_url: string; username: string; lastname: string}, id: string) {
     const collRef = doc(this.firestore, coll, id)
     return setDoc(collRef, data)
   }
@@ -62,4 +61,5 @@ export class FirestoreService {
       return undefined
     }
   }
+  
 }
