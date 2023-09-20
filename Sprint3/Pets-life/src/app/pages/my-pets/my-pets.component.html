@@ -4,7 +4,11 @@
     <div class="container ini-page">
         <h1 class="page-title">My Pets</h1>
         <div class="rectangle-pets" id="pets-container">
-
+            <div *ngFor="let pet of userPets" class="pet-card">
+                <img class="imagePet" [src]="imageUrl" alt="Imagen de la mascota">
+                <h2>{{ pet.name }}</h2>
+                
+              </div>
         </div>
         <button class="button-form" [routerLink]="['/add-pet']">Add a Pet</button>
     </div>

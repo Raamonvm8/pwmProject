@@ -26,22 +26,22 @@
             <div class="vertical-line"></div>
             <div class="right-section">
                 <h2 id="title-personal-information"class="section-title">Personal Information</h2>
-                <div class="input-total-profile">
+                <div class="input-total-profile" *ngIf="isLogged">
                     <div class="input-container">
                         <label class="input-label">Name</label>
-                        <input id="name-input" class="input-profile" readonly/>
+                        <input id="name-input" [value]="user.nombre" class="input-profile" readonly/>
                     </div>
                     <div class="input-container">
                         <label class="input-label">Last Name</label>
-                        <input id="last-name-input" class="input-profile" readonly/>
+                        <input id="last-name-input" [value]="user.apellidos" class="input-profile" readonly/>
                     </div>
                     <div class="input-container">
                         <label class="input-label">Email</label>
-                        <input id="email-input" class="input-profile" readonly/>
+                        <input id="email-input" [value]="user.correo" class="input-profile" readonly/>
                     </div>
                     <div class="input-container">
                         <label class="input-label">Password</label>
-                        <input id="password-input" class="input-profile" readonly/>
+                        <input id="password-input" value="******" class="input-profile" readonly/>
                     </div>
                 </div>
             </div>

@@ -24,18 +24,20 @@ export class AuthService {
   private userLogged: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   currentUser: AppUser | undefined;
 
-  constructor(private auth: AngularFireAuth) {
+  constructor(private auth: AngularFireAuth, private firestore: FirestoreService) {
     this.auth.onAuthStateChanged((user) => {
+      
       if (user) {
-        this.currentUser = {
-          id: user.uid,
-          correo: user.email || '',
-          password: '',
-          apellidos: '', 
-          isAdmin: false, 
-          nombre: '', 
-          foto: '', 
-        };
+          this.currentUser = {
+            id: user.uid,
+            correo: user.email || '',
+            password: '',
+            apellidos: '', 
+            isAdmin: false, 
+            nombre: '', 
+            foto: '', 
+          };
+          
         this.userLogged.next(true); 
       } else {
         this.currentUser = undefined;
@@ -43,7 +45,8 @@ export class AuthService {
       }
     });
   }
-
+    
+  
 
   get isLoggedIn() {
     return this.userLogged.asObservable(); 

@@ -32,6 +32,17 @@
     justify-items: center;
     overflow: hidden;
 }
+.imagePet{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: 5px solid white;
+}
 
 .photos-pet {
     width: 150px;

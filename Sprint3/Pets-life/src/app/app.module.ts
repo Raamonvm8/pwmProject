@@ -28,6 +28,7 @@ import { FirestoreService } from './services/firestore/firestore.service';
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import {HttpClientModule} from '@angular/common/http';
 import {provideFirestore, getFirestore} from '@angular/fire/firestore';
+import {provideStorage, getStorage} from '@angular/fire/storage';
 
 
 
@@ -74,6 +75,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     provideAuth(() => getAuth()),
     provideFirebaseApp( () => initializeApp(environment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
+
 
 
   ],
