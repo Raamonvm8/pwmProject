@@ -11,7 +11,7 @@ import { StorageService } from 'src/app/services/storage/storage.service';
   styleUrls: ['./my-pets.component.css']
 })
 export class MyPetsComponent implements OnInit{
-  constructor(private auth: AuthService, private firestore: FirestoreService) {}
+  constructor(private auth: AuthService, private firestore: FirestoreService, private storageService: StorageService) {}
   //userPets: Pet = {name:"", weight: "", photo:"", type:"", breed: "", userId: ""};
   userPets: Pet[] = [];
   imageUrl: string = '';
@@ -27,7 +27,6 @@ export class MyPetsComponent implements OnInit{
         if (currentUser) {
           const pet = await this.firestore.getDocsByFieldUserId(currentUser.id,"pets");
           this.userPets = pet.map((petDoc: any) => {
-            // Mapear los datos de DocumentData a Pet
             return {
               name: petDoc.name || "",
               weight: petDoc.weight || "",
@@ -38,7 +37,11 @@ export class MyPetsComponent implements OnInit{
               userId: currentUser.id || ""
             };
           });
-
+          if (this.userPets.length > 0 && this.userPets[0].photo) {
+            this.storageService.getUserImageUrl(this.userPets[0].userId, 'pets').subscribe((url) => {
+              this.imageUrl = url;
+            });
+          }
           console.log("datos", pet)
         }
       } 
