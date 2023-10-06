@@ -1,54 +1,91 @@
-import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FileUpload } from 'src/app/models/File/file.model';
-import { AppUser } from 'src/app/models/User/user/user.model';
-import { AuthService } from 'src/app/services/auth/auth.service';
-import { FirestoreService } from 'src/app/services/firestore/firestore.service';
-import { UserService } from 'src/app/services/users/user.service';
+import { AppUser } from '../../models/User/user/user.model';
+import { UserService } from '../../services/users/user.service';
+import { FileUpload } from '../../models/File/file.model';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./sign-up.component.css'],
 })
-export class SignUpComponent {
-  
-  user: AppUser = {apellidos:"", correo: "", password:"", id:"", isAdmin: false, nombre: "",  foto: ""};
+export class SignUpComponent implements OnInit {
+  userForm: FormGroup; 
+
+  user: AppUser = {
+    id: '',
+    nombre: '',
+    correo: '',
+    isAdmin: false,
+    foto: '',
+    apellidos: '',
+    password: '',
+  };
+
+  pass = '';
+  passConfirm = '';
   selectedFiles?: FileList;
-  pass = "";
   currentFileUpload?: FileUpload;
+  percentage = 0;
 
-
-  constructor(private auth: AuthService, private firestore: FirestoreService , private userService: UserService, private router: Router){
-  }
-  async signUp(){
-    console.log('datos', this.user)
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private fb: FormBuilder 
+  ) {
+    this.userForm = this.fb.group({
+      nombre: ['', Validators.required],
+      apellidos: [''],
+      correo: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+    });
     
-    await this.createUser2(this.user, this.pass, undefined);
-
-    this.router.navigate(['login'])
-    
   }
-  async createUser2(user2: AppUser, userPassword: string, fileUpload: FileUpload | undefined) {
-    const userCredentials = await this.auth.createUser(user2.correo, userPassword)
-    if (userCredentials.user?.uid) {
-      user2.id = userCredentials.user.uid;
-    } else {
-      console.error('UID de usuario no disponible.');
+
+  ngOnInit() {
+  }
+
+ async signUp() {
+  try {
+    if (this.pass === this.passConfirm) {
+      this.user.nombre = this.userForm.get('nombre')?.value || '';
+      this.user.apellidos = this.userForm.get('apellidos')?.value || '';
+      this.user.correo = this.userForm.get('correo')?.value || '';
+      this.user.password = this.userForm.get('password')?.value || '';
+
+      if (this.selectedFiles) {
+        const file: File | null = this.selectedFiles.item(0);
+        this.selectedFiles = undefined;
+
+        if (file) {
+          this.currentFileUpload = new FileUpload(file);
+          this.currentFileUpload.type = "user";
+          this.user.foto = this.currentFileUpload.name;
+        }
+        console.log("hay un fichero");
+        console.log(this.user, this.user.password);
+
+        await this.userService.createUser(this.user, this.user.password, this.currentFileUpload);
+
+        console.log("User created successfully");
+        this.router.navigate(['login']);
+      } else {
+        console.log("NO hay un fichero");
+      }
     }
-    console.log("user actualizado con datos de auth: ",user2)
-    await this.firestore.createDocWithId(`users`, {
-      email: user2.correo,
-      id: user2.id,
-      is_admin: user2.isAdmin,
-      photo_url: "",
-      username: user2.nombre,
-      lastname: user2.apellidos,
-    }, user2.id)
-
-    this.auth.logOut();
+  } catch (error) {
+    console.error('Error during sign up:', error);
   }
-
 }
 
+  
+
+  onFileSelected(event: Event) {
+    this.selectedFiles = (<HTMLInputElement>event.target).files!
+  }
+
+  onFileChange(event: any) {
+    this.selectedFiles = event.target.files;
+  }
+}

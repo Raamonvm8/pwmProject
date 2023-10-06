@@ -2,7 +2,9 @@
     justify-content: center;
     text-align: -webkit-center;    
 }
-
+.admin-body{
+    margin-top: 10rem;
+}
 .search-container {
     margin-bottom: 20px;
     display: flex;

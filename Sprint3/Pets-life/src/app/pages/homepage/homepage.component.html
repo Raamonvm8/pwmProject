@@ -1,61 +1,38 @@
-
-<body id="body-homepage">       
-    
-    <!-- Body page -->
-    <div class="container-homepage">
-        <div class="todo">
-           <div class="name-with-description">
-                <h1 class="app-name">The Best Pet Boarding Facility</h1>
-                <div class="description-with-text">
-                    <h2 id="description-text">Welcome to Pets-Life!</h2>
-                    <div class="white-rectangle">
-                        Discover <strong>the ultimate pet care experience in Gran Canaria</strong>. We specialize in <strong>managing and arranging top-notch boarding facilities</strong> for your beloved pets.<br><br> 
-                        From <strong>cozy pet-friendly spaces</strong> to attentive care, we're here to ensure that your furry friends have a <strong>comfortable and enjoyable stay</strong>.
-                    </div>
-                </div>
-            </div>
-                
-            <!-- Bootstrap carousel -->
-            <div id="carouselExampleAutoplaying" class="carousel slide managemnet-carousel" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../assets/images/homepage/catAndDogSleeping.jpg" class="d-block square" alt="cat and dog sleeping" style="width: 120%;">
-                        <div class="carousel-caption-overlay">
-                            <h5 class="header-image-container" style="color: #61f5eb;">Quality Pet Care</h5>
-                            <!--<p style="text-align: left;">Providing a peaceful and comfortable environment for your pets to relax and enjoy their stay.</p> -->
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../assets/images/homepage/assistanceDog.jpg" class="d-block square" alt="Expert assistance for dogs" style="width: 120%;">
-                        <div class="carousel-caption-overlay">
-                            <h5 class="header-image-container" style="color: #61f5eb;">Expert Caregivers</h5>
-                        <p style="text-align: left;">Our experienced caregivers ensure your pets receive the attention, love, and care they deserve.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../assets/images/homepage/dogAndCatCuddling.jpg" class="d-block square" alt="Dog and cat cuddling" style="width: 120%;">
-                        <div class="carousel-caption-overlay">
-                            <h5 class="header-image-container" style="color: #61f5eb;">Trusted Pet Boarding</h5>
-                            <p style="text-align: left;">Trust in our reliable services to provide a safe and happy home away from home for your pets.</p>
-                        </div>
-                    </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" style="height: 80%; transform: translateY(100%); background-color: rgba(0, 0, 0, 0.5);" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"style="height: 80%; transform: translateY(100%); background-color: rgba(0, 0, 0, 0.5);" aria-hidden="true" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>   
+<body>
+<div class="container-homepage">
+    <div class="todo">
+      <div class="name-with-description">
+        <h1 id="main-title" class="app-name">{{ mainTitle }}</h1>
+        <div class="description-with-text">
+          <h2 id="secondary-title" class="text-white">{{ secondaryTitle }}</h2>
+          <div class="white-rectangle fw-bold" id="description">{{ description }}</div>
         </div>
- 
-        <!-- Bootstrap dependencies --->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-      
-
- </body>
+      </div>
+  
+      <div id="carouselExampleDark" class="carousel carousel-dark slide managemnet-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div *ngFor="let item of carouselItems; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
+            <img [src]="item.imageUrl" alt="{{ item.title }}" class="d-block square image-with-caption">
+            <div class="carousel-caption d-none d-md-block" style="background: rgba(0, 0, 0, 0.5); width: 80%;">
+              <h5 style="color: #07F9A2;">{{ item.title }}</h5>
+              <p style="color: white; font-weight: bold;">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

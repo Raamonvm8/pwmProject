@@ -3,158 +3,150 @@
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
     z-index: 4;
-    align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
+    background-color: #07F9A2;
+}
+.header-phone{
     background-color: #07F9A2;
 }
 #body-form{
     margin-top: 10rem;
 }
 
-
-.imagen-logo, .imagen-hamburguer {
-    text-decoration: none;
-    color: white;
+.link{
+    border-radius: 10px;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
-#logo-footer-icon:hover{
-    color: rgb(19, 165, 112);
-}
-.imagen-logo {
-    margin-right: 30px;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.nav-header {
-    display: flex;
-    align-items: center;
-}
-
-.link {
-    padding: 10px 10px;
-    margin: 0 10px;
-    font-size: 1.0rem;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    background-color: transparent;
-    transition: background-color 0.3s;
-}
-
-.link:hover {
-    background-color: rgb(255, 255, 255);
-    color: #07F9A2;
-}
-
-.imagen-hamburguer {
+.display-phone-width {
     display: none;
-    cursor: pointer;
 }
+
+.title-phone{
+    font-size: 2rem;
+    min-width: 2rem;
+}
+
+#logo-movil-icon{
+    font-size: 4rem;
+    min-width: 4rem;
+}
+
+.span-space{
+    margin-left: 1rem;
+}
+
+.link-phone {
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 0.1rem;
+}
+
+#logo-icon-header{
+    font-size: 3rem;
+    margin-left: 2.5rem;
+    margin-bottom: 0.5rem;
+    &:hover {
+        color: rgb(19, 165, 112);
+    }
+}
+
+.imagen-logo, .link, .link-phone {
+    text-decoration: none;
+}
+
+.content-phone {
+    flex-direction: column;
+    justify-content: flex-end; 
+    padding: 20px;
+    min-width: 12rem;
+}
+
+#phone-icons-logged{
+    margin-top: calc(1rem + 1vh);
+}
+
+#phone-icons-not-logged{
+    margin-top: calc(4rem + 5vh);
+}
+
+.imagen-logo {
+    margin-right: 10px;
+}  
 
 .register-button, .login-button {
     padding: 5px 15px;
     margin-right: 15px;
     font-size: 1rem;
-    font-weight: bold;
     border: 2px solid white;
     border-radius: 5px;
+    font-weight: bold;
     cursor: pointer;
-    color: white;
     background-color: transparent;
     transition: background-color 0.3s, color 0.3s;
 }
 
+.logo-container, .nav-header, .header, .content-phone  {
+    align-items: center;
+}
 
-.register-button:hover, .login-button:hover {
+.display-high-width, .logo-container, .nav-header, .header, .content-phone {
+    display: flex;
+}  
+
+.register-button:hover, .login-button:hover, .link:hover {
     color: #07F9A2;
+    font-weight: bold;
     background-color: white;
 }
 
-.logo {
+#register-button-movil:hover, #login-button-movil:hover,.link-phone:hover {
+    background-color: #4ec5bd;
+}
+
+#users-logged-position-button{
+    margin-bottom: 2rem;
+}
+
+.logo, #register-button-movil:hover, #login-button-movil:hover, .link, .link-phone, .register-button, .login-button  {
     color: white;
 }
 
-.mobile-menu {
-    display: none;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    position: absolute;
-    top: 50px; /* Ajusta según tu diseño */
-    right: 20px; /* Ajusta según tu diseño */
-    z-index: 1; /* Asegura que el menú aparezca sobre otros elementos */
-}
-
-.mobile-menu.active {
-    display: block;
-    padding: 10px 0;
-    
-}
-
-.mobile-menu a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #333;
-    
-}
-
-/*Tablet*/
+/* Tablet */
 @media only screen and (max-width: 1200px) {
-    .header {
-        background-color: #07F9A2;
+    .display-phone-width{
+        display: none;
+    }
+    .display-high-width{
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-    }
-    
-    .logo-container {
-        margin-right: auto; 
-    }
-    
+    }    
 }
 
-/*Movil*/
-@media only screen and (max-width: 890px) {
-    #boton-hamburguesa-header {
-        display: block;
-        width: 4rem;
-        height: 4rem;
-        text-align: center;
-        justify-content: center;
-        color: white;
-    }
-    .imagen-hamburguer{
-        display: block;
-    }
-
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+/* Phones */
+@media only screen and (max-width: 750px) {
+    .display-phone-width{
         display: flex;
-        z-index: 4;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-        background-color: #07F9A2;
     }
-    .link {
-        display: none;   
-    }
-    .register-button, .login-button {
-        display:none;
-    }
-    
 
-    
+    .display-high-width{
+        display: none;
+    }
+
+    #logo-icon-header{
+        margin-left: 0.5rem;
+    }
+
+    .register-button, .login-button{
+        margin-right: 5px;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    #users-logged-position-button{
+        text-align: center;
+    }
 }

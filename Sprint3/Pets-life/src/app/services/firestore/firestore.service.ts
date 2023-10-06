@@ -2,13 +2,9 @@ import {Injectable, Query} from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import {
   Firestore, addDoc, collection, collectionData,
-  doc, docData, deleteDoc, updateDoc, DocumentReference, setDoc, where, query, getDocs, getDoc, DocumentData, QuerySnapshot
+  doc, docData, deleteDoc, updateDoc, DocumentReference, setDoc, where, query, getDocs, getDoc, DocumentData, QuerySnapshot, DocumentSnapshot
 } from '@angular/fire/firestore';
-import {Observable} from "rxjs";
-import { map } from 'rxjs/operators';
-import { Pet } from 'src/app/models/Pet/pet.model';
-import { AppUser } from 'src/app/models/User/user/user.model';
-
+import {Observable, from, of, switchMap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +14,22 @@ export class FirestoreService {
 
   constructor(private firestore: Firestore, private auth: AngularFireAuth) {
   }
-  getAllDocs(coll: string) {
-    const usersRef = collection(this.firestore, coll)
-    return collectionData(usersRef, {idField: 'id'}) as Observable<any>
-  }
+  
+ getAllDocs(coll: string): Observable<any> {
+  const usersRef = collection(this.firestore, coll);
+  return from(getDocs(usersRef)).pipe(
+    switchMap((querySnapshot) => {
+      const data = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      return of(data);
+    })
+  );
+}
+
+async getUsersByEmail(userId: string, coleccion: string) {
+  const q = query(collection(this.firestore, coleccion), where("email", "==", userId));
+  const querySnapshot = await getDocs(q);
+  return querySnapshot.docs.map(doc => doc.data());
+}
 
   createDoc(coll: string, data: {}) {
     const collRef = collection(this.firestore, coll)
@@ -54,17 +62,39 @@ export class FirestoreService {
   }
 
   async getDocsByFieldUserId(userId: string, coleccion: string) {
+    const q = query(collection(this.firestore, coleccion), where("id", "==", userId));
+    const querySnapshot = await getDocs(q);
+    return querySnapshot.docs.map(doc => doc.data());
+  }
+
+  async getDocsByFieldOwnerId(userId: string, coleccion: string) {
     const q = query(collection(this.firestore, coleccion), where("userId", "==", userId));
     const querySnapshot = await getDocs(q);
     return querySnapshot.docs.map(doc => doc.data());
   }
 
-  getAllUserData(userId: string): Observable<any[]> {
-    const q = query(
-      collection(this.firestore, 'tu_coleccion_de_usuarios'), // Reemplaza con el nombre de tu colección
-      where('userId', '==', userId)
+  getAllDocuments(coll: string): Observable<any[]> {
+    const collectionRef = collection(this.firestore, coll);
+    return from(getDocs(collectionRef)).pipe(
+      switchMap((querySnapshot) => {
+        const data = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        return of(data);
+      })
     );
-    return collectionData(q, { idField: 'id' }) as Observable<any[]>;
+  }
+
+  getDocByIdentify(coll: string): Observable<any> {
+    const docRef: DocumentReference<DocumentData> = doc(this.firestore,`${coll}`);
+    return from(getDoc(docRef)).pipe(
+      switchMap((docSnapshot) => {
+        if (docSnapshot.exists()) {
+          return of({ id: docSnapshot.id, ...docSnapshot.data() });
+        } else {
+          console.log('No such document!');
+          return of(undefined);
+        }
+      })
+    );
   }
 
   async getDocByIdSnapshot(coll: string){
@@ -74,10 +104,8 @@ export class FirestoreService {
     if (docSnap.exists()) {
       return docSnap.data()
     } else {
-      // docSnap.data() will be undefined in this case
       console.log("No such document!");
       return undefined
     }
-  }
-  
+  }  
 }

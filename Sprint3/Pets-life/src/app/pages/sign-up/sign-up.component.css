@@ -1,39 +1,28 @@
-body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-#body-form{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-#log, #save-button, #cancel-button{
+#log, #save-button, #cancel-button {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
-    color: #fff;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
+#body-form{
+    margin-top: 10rem;
+}
+#log{
+    color: white;
+}
 
-#log, #save-button{
+#log, #save-button {
     background-color: #09C184;
 }
 
-#cancel-button{
+#cancel-button {
     background-color: #c15309;
     margin-bottom: 1rem;
 }
 
-#cancel-button:hover{
+#cancel-button:hover {
     background-color: #7a3608;
 }
 
@@ -47,19 +36,26 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0 2rem;
-}
-.form-register-position, .form-animal-position{
     margin-bottom: 2rem;
 }
-.form-register, .form-animal{
+
+#form-register{
     width: 30%;
-}
-.form-login, .form-register, .form-animal {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 40px 20px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #eeeeee;
+    background-color: #f5f5f5;
+}
+
+
+.form-login, .form-register, .form-animal {
+    width: 30%;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 40px 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #f5f5f5;
 }
 
 #title-form {
@@ -108,35 +104,31 @@ body{
 .signup-link:hover {
     color: #0077aa;
 }
-/*Tablet*/
-@media only screen and (max-width: 1200px) {
-    
-    
-}
 
-/*Movil*/
-@media only screen and (max-width: 750px) {
-    .form-animal-position, .form-login-position, .form-register-position {
-        
-        background-color: #09C184;
+/* Tablet and Phones */
+@media only screen and (max-width: 1200px), only screen and (max-width: 750px) {
+    .form-login-position, .form-register-position, .form-animal-position {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 70vh;
-        margin-left: 0rem;
+        height: auto;
+        margin: 0;
+        padding: 1rem; 
     }
-    .form-animal{
-        width: 70%;
-        margin: 1rem;
+
+    .form-login, .form-register, .form-animal {
+        width: 100%; 
+        max-width: 90%; 
+        margin: 0;
     }
-    #log, #save-button, #cancel-button{
+
+    #log, #save-button, #cancel-button {
         width: 100%;
-        padding: 10px;
-        border-radius: 10px;
-        color: #fff;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s;
+        margin-bottom: 1rem; 
     }
-    
+
+    .input-form {
+        width: 100%;
+        max-width: 100%; 
+    }
 }

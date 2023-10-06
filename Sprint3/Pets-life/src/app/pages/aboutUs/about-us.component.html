@@ -1,28 +1,12 @@
-
-<body id="body-form">
-    <!-- Body page -->
+<body>
     <div class="container">
         <div class="section section-about">
-            <h2 id="aboutUs-title"><strong>Discover Canine Care Connect</strong></h2>
+          <h2 id="aboutUs-title"><strong>Discover Canine Care Connect</strong></h2>
         </div>
         <div class="section section-info">
-            <div class="inner-section" id="aboutUs-content">
-                <p>Welcome to Canine Care Connect where tail-wagging happiness meets exceptional care! As devoted pet lovers ourselves, we're committed to offering a pawsitively delightful experience for pet parents seeking premium care for their cherished pups right here in Gran Canaria.</p>
-                <p>Our mission? To bridge the gap between pet parents and the finest canine accommodations across the island. We know how daunting it can be to find the pawfect place for your fur babies while you're away, and that's where we come in. By collaborating with a network of esteemed dog boarding facilities, we provide an all-encompassing solution that fulfills both your needs and your pets' desires.</p>
-                <p>At Canine Care Connect, we deeply treasure the bond between humans and their canine companions. Our dedicated team ensures that your furry pals receive unmatched attention, safety, and a home-away-from-home experience. With a keen focus on comfort, security, and tailor-made services, we're dedicated to ensuring your pets' stay is as delightful as possible.</p>
-                <p>Join us in crafting a joyful and worry-free journey for you and your cherished pets. Let's embark on this adventure of trust, compassion, and wagging tails together!</p>
-            </div>
+          <div class="inner-section" id="aboutUs-content">
+            <p *ngFor="let paragraph of aboutUsData" class="paragraph-about-us">{{ paragraph }}</p>
+          </div>
         </div>
-    </div>
-    
-    
-
-    <!-- Bootstrap dependencies -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    
-    <!-- Font awesome dependencies -->
-    <script src="https://kit.fontawesome.com/9cdb4512b3.js" crossorigin="anonymous"></script>
-    <script src="../js/hamburguer.js"></script>
+      </div>      
 </body>

@@ -9,9 +9,12 @@
     font-weight: bold;
     text-align: center;
 }
-
+.pet-photo{
+    width: 8rem;
+    padding: 2rem;
+    border-radius: 50%;
+}
 .ini-page {
-    margin-top: 10rem;
     padding: 2rem;
     text-align: center;
     background-color: #fff;
@@ -23,25 +26,23 @@
     align-items: center;
 }
 
+.pet-item {
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .pet-item:hover {
+    background-color: #e0e0e0; }
+
 .rectangle-pets {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 2rem;
     margin: 2rem 1rem;
+    margin-left: 9rem;
     padding: 2rem;
     justify-items: center;
     overflow: hidden;
-}
-.imagePet{
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    border: 5px solid white;
 }
 
 .photos-pet {

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms'; 
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './routing-module';
 import { HeaderComponent } from './pages/components/header/header.component';
@@ -24,11 +24,10 @@ import { EditProfileComponent } from './pages/components/forms/edit-profile/edit
 import { AdminUsersComponent } from './pages/components/admins/admin-users/admin-users.component';
 import { AdminBookingsComponent } from './pages/components/admins/admin-bookings/admin-bookings.component';
 import {environment} from './environments/environment';
-import { FirestoreService } from './services/firestore/firestore.service';
 import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 import {HttpClientModule} from '@angular/common/http';
 import {provideFirestore, getFirestore} from '@angular/fire/firestore';
-import {provideStorage, getStorage} from '@angular/fire/storage';
+import {provideStorage, getStorage, } from '@angular/fire/storage';
 
 
 
@@ -37,6 +36,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import {provideAuth, getAuth} from '@angular/fire/auth';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { HeaderUserLoggedComponent } from './pages/components/header-user-logged/header-user-logged.component';
+import { HeaderAdminUserComponent } from './pages/components/header-admin-user/header-admin-user.component';
 
 
 
@@ -61,11 +62,14 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     EditProfileComponent,
     AdminUsersComponent,
     AdminBookingsComponent,
+    HeaderUserLoggedComponent,
+    HeaderAdminUserComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,

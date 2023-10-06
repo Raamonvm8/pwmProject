@@ -1,9 +1,8 @@
-import {Injectable} from '@angular/core';
-import {AngularFireDatabase, AngularFireList} from "@angular/fire/compat/database";
-import {AngularFireStorage} from "@angular/fire/compat/storage";
-import {FileUpload} from "../../models/File/file.model";
-import {finalize, from, Observable} from "rxjs";
-import {getDownloadURL} from "@angular/fire/storage";
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { FileUpload } from '../../models/File/file.model';
+import { finalize, from, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +11,11 @@ export class StorageService {
 
   private basePath: string = ""
 
-  constructor(private dataBase: AngularFireDatabase, private storage: AngularFireStorage) {
-  }
+  constructor(private db: AngularFireDatabase, private storage: AngularFireStorage) {}
 
   pushFileToStorage(fileUpload: FileUpload, id: string): Observable<any> {
-    if (fileUpload.type === "car") {
-      this.basePath = "/cars/"
+    if (fileUpload.type === "pets") {
+      this.basePath = "/pets/"
     } else {
       this.basePath = "/users/"
     }
@@ -54,7 +52,7 @@ export class StorageService {
   }
 
   getFiles(numFiles: number, path: string): AngularFireList<FileUpload> {
-    return this.dataBase.list(path, ref =>
+    return this.db.list(path, ref =>
       ref.limitToLast(numFiles)
     )
   }
@@ -69,11 +67,7 @@ export class StorageService {
   }
 
   private saveFileData(fileUpload: FileUpload) {
-    this.dataBase.list(this.basePath).push(fileUpload)
-  }
-
-  private deleteFileDatabase(key: string) {
-    return this.dataBase.list(this.basePath).remove(key)
+    this.db.list(this.basePath).push(fileUpload)
   }
 
   private deleteFileStorage(path: string, id: string) {

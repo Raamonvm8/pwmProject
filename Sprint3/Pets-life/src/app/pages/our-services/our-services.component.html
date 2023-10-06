@@ -1,33 +1,17 @@
-
-<body id="body-form">
-
-    <!-- Body page -->
-    <div class="container">
-        <div class="section-title">
-            <h2><strong>Discover Our Services</strong></h2>
-        </div>
-        <div class="services-box">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-paw"></i>
-                </div>  
-                <h3 class="service-title">Pet Care</h3>
-                <p class="service-description">We provide expert care for your pets, ensuring their health, happiness, and comfort.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-bone"></i>
-                </div>
-                <h3 class="service-title">Nutrition Plans</h3>
-                <p class="service-description">Tailored nutrition plans to meet the unique dietary needs of each pet.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-bed"></i>
-                </div>
-                <h3 class="service-title">Cozy Accommodation</h3>
-                <p class="service-description">Comfortable and safe accommodations designed to make your pets feel at home.</p>
-            </div>
-        </div>
+<body>
+<div class="container">
+    <div class="section-title">
+      <h2><strong>Discover Our Services</strong></h2>
     </div>
+    <div class="services-box" *ngIf="services.length > 0">
+      <div class="service-card" *ngFor="let service of services">
+        <div class="service-icon">
+          <i [class]="service.icon"></i>
+        </div>
+        <h3 class="service-title">{{ service.name }}</h3>
+        <p class="service-description">{{ service.description }}</p>
+      </div>
+    </div>
+    <div *ngIf="services.length === 0">Loading...</div>
+  </div>
 </body>

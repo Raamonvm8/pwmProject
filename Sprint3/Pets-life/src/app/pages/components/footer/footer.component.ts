@@ -7,6 +7,4 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent {
-  faPaw=faPaw;
-}
+export class FooterComponent {}

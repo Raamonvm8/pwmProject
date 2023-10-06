@@ -6,7 +6,9 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
+body{
+    margin-top: 10rem;
+}
 #log, #save-button {
     background-color: #09C184;
 }
@@ -22,9 +24,6 @@
 
 #log:hover, #save-button:hover {
     background-color: #0b8e68;
-}
-.form-animal{
-    margin-top: 10rem;
 }
 
 .form-login-position, .form-register-position, .form-animal-position {
